@@ -57,13 +57,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
             </div>
             <h1>Qué pereza la presa</h1>
+            <hr />
         </div>
     </div>
 
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+    <div class="row">
+        <?= $this->Flash->render() ?>
+            <?= $this->fetch('content') ?>
+
+		<aside class="large-3 columns">
+			<button>Donaciones</button>
+			<ul class="side-nav">
+				<li><a href="#">Galería</a></li>
+				<li><a href="#">Preguntas frecuentes</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+			<div class="panel">
+				<h5>Lorem ipsum</h5>
+				<p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. 
+	Swine short ribs meatball irure bacon nulla pork belly cupidatat 
+	meatloaf cow.</p>
+				<a href="#">Leer más...</a>
+			</div>
+		</aside>
     </div>
+
     <footer>
     </footer>
 </body>
