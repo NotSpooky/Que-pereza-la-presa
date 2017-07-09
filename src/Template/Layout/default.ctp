@@ -21,8 +21,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+		<?php if (isset($title)) {
+			echo $title;
+		} else {
+			echo $cakeDescription. ':' . $this->fetch('title'); 
+		} ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
@@ -34,6 +37,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
+    <!-- Barra por defecto:
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
@@ -46,7 +50,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
-    </nav>
+    </nav>-->
+     <div class="row">
+        <div class="large-12 columns">
+            <div class="nav-bar right">
+
+            </div>
+            <h1>Qué pereza la presa</h1>
+        </div>
+    </div>
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

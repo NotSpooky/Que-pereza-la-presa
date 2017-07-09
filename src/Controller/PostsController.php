@@ -14,6 +14,17 @@ class PostsController extends AppController
 {
 
     /**
+     * Implements homepage functionality.
+     */
+    public function home()
+    {
+		$this->set('title', 'Qué pereza la presa');
+        $posts = $this->paginate($this->Posts);
+
+        $this->set(compact('posts'));
+        $this->set('_serialize', ['posts']);
+    }
+    /**
      * Index method
      *
      * @return \Cake\Http\Response|void
