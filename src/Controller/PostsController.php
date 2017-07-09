@@ -31,6 +31,8 @@ class PostsController extends AppController
      */
     public function index()
     {
+        $this->set('title', 'Administración de posts');
+		$this->set('isAdmin', true);
         $posts = $this->paginate($this->Posts);
 
         $this->set(compact('posts'));
@@ -50,6 +52,7 @@ class PostsController extends AppController
             'contain' => ['Comments']
         ]);
 
+        $this->set('title', $post ['title']);
         $this->set('post', $post);
         $this->set('_serialize', ['post']);
     }
@@ -73,6 +76,8 @@ class PostsController extends AppController
         }
         $this->set(compact('post'));
         $this->set('_serialize', ['post']);
+        $this->set('title', 'Creando nuevo post');
+        $this->set('isAdmin', true);
     }
 
     /**
@@ -98,6 +103,8 @@ class PostsController extends AppController
         }
         $this->set(compact('post'));
         $this->set('_serialize', ['post']);
+        $this->set('title', 'Editando: '.$post ['title']);
+        $this->set('isAdmin', true);
     }
 
     /**

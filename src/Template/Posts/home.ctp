@@ -8,12 +8,12 @@
                 <div class="large-6 columns">
                     <p><?= $post ['summary'] ?></p>
                 </div>
-            </div>
             <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
                 <div class="large-6 columns">
-                    <img src='<?= $post ['photo'] ?>'></img>
+                    <img width="400" height="240" src='<?= $post ['photo'] ?>'></img>
                 </div>
             <?php } ?>
+            </div>
         </article>
     <?php } ?>
 </div>
