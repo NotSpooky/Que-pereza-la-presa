@@ -31,7 +31,7 @@ class PostsController extends AppController
      */
     public function index()
     {
-        $this->set('title', 'Administración de posts');
+        $this->set('title', 'Administración de publicaciones');
 		$this->set('isAdmin', true);
         $posts = $this->paginate($this->Posts);
 

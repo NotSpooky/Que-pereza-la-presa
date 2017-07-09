@@ -37,7 +37,9 @@ class PostsTable extends Table
         $this->setTable('posts');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
-
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
         $this->addBehavior('Timestamp');
 
         $this->hasMany('Comments', [

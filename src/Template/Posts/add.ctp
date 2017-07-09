@@ -12,14 +12,16 @@
     </ul>
 </nav>
 <div class="posts form large-9 medium-8 columns content">
-    <?= $this->Form->create($post) ?>
+    <?= $this->Form->create($post, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Add Post') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->control('photo');
+            //echo $this->Form->control('photo');
+            echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('summary');
             echo $this->Form->control('text');
+            echo $this->Form->control('author');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
