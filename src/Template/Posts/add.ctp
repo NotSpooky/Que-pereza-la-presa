@@ -16,10 +16,10 @@
     <fieldset>
         <legend><?= __('Add Post') ?></legend>
         <?php
+            echo $this->Form->control('title');
             echo $this->Form->control('photo');
             echo $this->Form->control('summary');
             echo $this->Form->control('text');
-            echo $this->Form->control('title');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

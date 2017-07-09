@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property string $title
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
+ * @property string $author
  *
  * @property \App\Model\Entity\Comment[] $comments
  */

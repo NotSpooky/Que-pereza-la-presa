@@ -73,6 +73,10 @@ class PostsTable extends Table
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
+        $validator
+            ->requirePresence('author', 'create')
+            ->notEmpty('author');
+
         return $validator;
     }
 }
