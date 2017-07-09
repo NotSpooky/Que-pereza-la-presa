@@ -10,7 +10,7 @@
                 </div>
             <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
                 <div class="large-6 columns">
-                    <img width="400" height="240" src='<?= $post ['photo'] ?>'></img>
+                    <img width="400" height="240" src='<?= DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'] ?>'></img>
                 </div>
             <?php } ?>
             </div>
