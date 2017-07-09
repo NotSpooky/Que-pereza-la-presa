@@ -37,52 +37,52 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <!-- Barra por defecto:
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
+    
+    <?php if (isset($isAdmin) && $isAdmin) { // Se coloca navegación arriba ?>
+        <nav class="top-bar expanded" data-topbar role="navigation">
+            <ul class="title-area large-3 medium-4 columns">
+                <li class="name">
+                    <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                </li>
             </ul>
-        </div>
-    </nav>-->
-     <div class="row">
-        <div class="large-12 columns">
-            <div class="nav-bar right">
-
+            <div class="top-bar-section">
+                <ul class="right">
+                    <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
+                    <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
+                </ul>
             </div>
-            <h1>Qué pereza la presa</h1>
-            <hr />
+        </nav>
+    <?php } else { // Barra de navegación normal ?>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="nav-bar right">
+
+                </div>
+                <h1>Qué pereza la presa</h1>
+                <hr />
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <?= $this->Flash->render() ?>
+    <?php } ?>
+        <div class="row">
+            <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
-
-		<aside class="large-3 columns">
-			<button>Donaciones</button>
-			<ul class="side-nav">
-				<li><a href="#">Galería</a></li>
-				<li><a href="#">Preguntas frecuentes</a></li>
-				<li><a href="#">Contacto</a></li>
-			</ul>
-			<div class="panel">
-				<h5>Lorem ipsum</h5>
-				<p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. 
-	Swine short ribs meatball irure bacon nulla pork belly cupidatat 
-	meatloaf cow.</p>
-				<a href="#">Leer más...</a>
-			</div>
-		</aside>
-    </div>
-
-    <footer>
-    </footer>
+            <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
+                <aside class="large-3 columns">
+                    <button>Donaciones</button>
+                    <ul class="side-nav">
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                    <div class="panel">
+                        <h5>Lorem ipsum</h5>
+                        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. 
+            Swine short ribs meatball irure bacon nulla pork belly cupidatat 
+            meatloaf cow.</p>
+                        <a href="#">Leer más...</a>
+                    </div>
+                </aside>
+            <?php } ?>
+        </div>
 </body>
 </html>
