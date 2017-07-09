@@ -86,7 +86,8 @@ var items = [
     {
         src: '<?= DS.'files'.DS.'Gallery'.DS.'photo'.DS.$photo ['photo'] ?>',
         w: 600,
-        h: 400
+        h: 400,
+        <?= isset ($photo ['title']) ? 'title: "'.$photo['title'].'"' : '' ?>
     },
 <?php } ?>
 ];
