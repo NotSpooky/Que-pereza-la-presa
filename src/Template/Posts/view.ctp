@@ -19,6 +19,10 @@
     <h3><?= h($post->title) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Title') ?></th>
+            <td><?= h($post->title) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Photo') ?></th>
             <td><?= h($post->photo) ?></td>
         </tr>
@@ -29,10 +33,6 @@
         <tr>
             <th scope="row"><?= __('Text') ?></th>
             <td><?= h($post->text) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($post->title) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

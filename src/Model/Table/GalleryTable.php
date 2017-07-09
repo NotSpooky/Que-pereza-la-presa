@@ -35,6 +35,9 @@ class GalleryTable extends Table
         $this->setTable('gallery');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
 
         $this->addBehavior('Timestamp');
     }

@@ -14,6 +14,15 @@ class GalleryController extends AppController
 {
 
     /**
+     * Shows all the images.
+     */
+    public function list () {
+        $gallery = $this->paginate($this->Gallery)->toArray();
+
+        $this->set(compact('gallery'));
+        $this->set('_serialize', ['gallery']);
+    }
+    /**
      * Index method
      *
      * @return \Cake\Http\Response|void
