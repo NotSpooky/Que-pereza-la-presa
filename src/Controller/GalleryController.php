@@ -21,6 +21,7 @@ class GalleryController extends AppController
      * Shows all the images.
      */
     public function list () {
+        $this->set('title', 'Galería');
         $gallery = $this->paginate($this->Gallery)->toArray();
 
         $this->set(compact('gallery'));
@@ -33,6 +34,7 @@ class GalleryController extends AppController
      */
     public function index()
     {
+        $this->set(['title' => 'Galería', 'isAdmin' => true]);
         $gallery = $this->paginate($this->Gallery);
 
         $this->set(compact('gallery'));
@@ -48,6 +50,7 @@ class GalleryController extends AppController
      */
     public function view($id = null)
     {
+        $this->set(['title' => 'Galería', 'isAdmin' => true]);
         $gallery = $this->Gallery->get($id, [
             'contain' => []
         ]);
@@ -63,6 +66,7 @@ class GalleryController extends AppController
      */
     public function add()
     {
+        $this->set(['title' => 'Agregando en galería', 'isAdmin' => true]);
         $gallery = $this->Gallery->newEntity();
         if ($this->request->is('post')) {
             $gallery = $this->Gallery->patchEntity($gallery, $this->request->getData());
@@ -100,6 +104,7 @@ class GalleryController extends AppController
         }
         $this->set(compact('gallery'));
         $this->set('_serialize', ['gallery']);
+        $this->set(['title' => 'Editando en galería', 'isAdmin' => true]);
     }
 
     /**

@@ -36,7 +36,7 @@ class PostsController extends AppController
      */
     public function index()
     {
-        $this->set('title', 'Administración de publicaciones');
+        $this->set(['title' => 'Administración de publicaciones', 'isAdmin' => true]);
 		$this->set('isAdmin', true);
         $posts = $this->paginate($this->Posts);
 
@@ -57,9 +57,9 @@ class PostsController extends AppController
             'contain' => ['Comments']
         ]);
 
-        $this->set('title', $post ['title']);
         $this->set('post', $post);
         $this->set('_serialize', ['post']);
+        $this->set(['title' => $post->title, 'isAdmin' => true]);
     }
 
     /**
