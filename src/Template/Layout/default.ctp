@@ -58,7 +58,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <div class="nav-bar right">
 
                 </div>
-                <h1>Qué pereza la presa</h1>
+                <h1><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" />Qué pereza la presa</h1>
                 <hr />
             </div>
         </div>
