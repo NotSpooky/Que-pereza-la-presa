@@ -20,6 +20,7 @@ class CommentsController extends AppController
      */
     public function index()
     {
+        $this->set(['title' => 'Comentarios', 'isAdmin' => true]);
         $this->paginate = [
             'contain' => ['Posts']
         ];
@@ -38,6 +39,7 @@ class CommentsController extends AppController
      */
     public function view($id = null)
     {
+        $this->set(['title' => 'Comentario', 'isAdmin' => true]);
         $comment = $this->Comments->get($id, [
             'contain' => ['Posts']
         ]);
@@ -53,6 +55,7 @@ class CommentsController extends AppController
      */
     public function add()
     {
+        $this->set(['title' => 'Agregando comentario', 'isAdmin' => true]);
         $comment = $this->Comments->newEntity();
         if ($this->request->is('post')) {
             $comment = $this->Comments->patchEntity($comment, $this->request->getData());
@@ -92,6 +95,7 @@ class CommentsController extends AppController
         $posts = $this->Comments->Posts->find('list', ['limit' => 200]);
         $this->set(compact('comment', 'posts'));
         $this->set('_serialize', ['comment']);
+        $this->set(['title' => 'Editando comentario', 'isAdmin' => true]);
     }
 
     /**

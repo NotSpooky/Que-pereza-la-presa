@@ -15,7 +15,7 @@ class PostsController extends AppController
 {
     public function beforeFilter (Event $event) {
         parent::beforeFilter ($event);
-        $this->Auth->allow (['home']);
+        $this->Auth->allow (['home', 'view']);
     }
 
     /**
@@ -29,6 +29,7 @@ class PostsController extends AppController
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);
     }
+
     /**
      * Index method
      *
@@ -59,7 +60,7 @@ class PostsController extends AppController
 
         $this->set('post', $post);
         $this->set('_serialize', ['post']);
-        $this->set(['title' => $post->title, 'isAdmin' => true]);
+        $this->set(['title' => $post->title]);
     }
 
     /**
