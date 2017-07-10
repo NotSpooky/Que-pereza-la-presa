@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -11,6 +12,28 @@ use App\Controller\AppController;
 class UsersController extends AppController
 {
 
+    public function login () {
+        $this->set (['isAdmin' => true, 'title' => 'Inicio de sesión']);
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again'));
+        } 
+    }
+
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
+
+    public function beforeFilter (Event $event) {
+        parent::beforeFilter ($event);
+        $this->Auth->allow (['logout', 'login']);
+    }
+
     /**
      * Index method
      *
@@ -18,6 +41,8 @@ class UsersController extends AppController
      */
     public function index()
     {
+
+        $this->set (['isAdmin' => true, 'title' => 'Lista de usuarios']);
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
@@ -38,6 +63,7 @@ class UsersController extends AppController
         ]);
 
         $this->set('user', $user);
+        $this->set (['isAdmin' => true, 'title' => $user -> username]);
         $this->set('_serialize', ['user']);
     }
 
@@ -48,6 +74,7 @@ class UsersController extends AppController
      */
     public function add()
     {
+        $this->set (['isAdmin' => true, 'title' => 'Creando usuario']);
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -85,6 +112,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
+        $this->set (['isAdmin' => true, 'title' => 'Editando '.$user->username]);
     }
 
     /**
