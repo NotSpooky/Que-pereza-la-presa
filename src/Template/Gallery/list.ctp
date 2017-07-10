@@ -6,20 +6,29 @@
 ?>
 <link rel="stylesheet" href="/gallery/photoswipe.css"> 
 <link rel="stylesheet" href="/gallery/default-skin/default-skin.css">
+<style>
+.imageE {
+    width: 250px;
+    max-width: 250px;
+    height: 250px;
+    max-height: 250px;
+    display: inline-block;
+}
+</style>
 <script src="/gallery/photoswipe.min.js"></script> 
 <script src="/gallery/photoswipe-ui-default.min.js"></script> 
 <div class="large-9 columns" role="content">
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
     <?php foreach ($gallery as $photo) {
         $photoPath = DS.'files'.DS.'Gallery'.DS.'photo'.DS.$photo ['photo']; ?>
-        <span itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <figure>
-            <a href="<?= $photoPath ?>" itemprop="contentUrl" data-size="768x768">
-                <img width="230" height="230" src="<?= $photoPath ?>" itemprop="thumbnail" alt="<?= $photo ['description'] ?>" />
-            </a>
-            <figcaption style="display: none" itemprop="caption description"><?= $photo ['title'] ?></figcaption>
-        </figure>
-        </span>
+        <div class="imageE" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <figure>
+                <a href="<?= $photoPath ?>" itemprop="contentUrl" data-size="768x768">
+                    <img width="230" height="230" src="<?= $photoPath ?>" itemprop="thumbnail" alt="<?= $photo ['description'] ?>" />
+                </a>
+                <figcaption style="display: none" itemprop="caption description"><?= $photo ['title'] ?></figcaption>
+            </figure>
+        </div>
     <?php } ?>
     </div>
 </div>
