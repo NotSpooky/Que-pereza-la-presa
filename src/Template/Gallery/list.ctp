@@ -9,19 +9,21 @@
 <script src="/gallery/photoswipe.min.js"></script> 
 <script src="/gallery/photoswipe-ui-default.min.js"></script> 
 <div class="large-9 columns" role="content">
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <table>
+    <tr class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
     <?php foreach ($gallery as $photo) {
         $photoPath = DS.'files'.DS.'Gallery'.DS.'photo'.DS.$photo ['photo']; ?>
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="<?= $photoPath ?>" itemprop="contentUrl" data-size="1024x1024">
+        <th itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure>
+            <a href="<?= $photoPath ?>" itemprop="contentUrl" data-size="768x768">
                 <img width="230" height="230" src="<?= $photoPath ?>" itemprop="thumbnail" alt="<?= $photo ['description'] ?>" />
             </a>
             <figcaption itemprop="caption description"><?= $photo ['title'] ?></figcaption>
         </figure>
+        </th>
     <?php } ?>
-    </div>
-
-    
+    </tr>
+    </table>
 </div>
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
