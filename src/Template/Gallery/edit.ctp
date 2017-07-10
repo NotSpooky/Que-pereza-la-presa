@@ -16,11 +16,11 @@
     </ul>
 </nav>
 <div class="gallery form large-9 medium-8 columns content">
-    <?= $this->Form->create($gallery) ?>
+    <?= $this->Form->create($gallery, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Edit Gallery') ?></legend>
         <?php
-            echo $this->Form->control('photo');
+            echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('title');
             echo $this->Form->control('description');
         ?>
