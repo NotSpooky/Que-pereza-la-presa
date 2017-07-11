@@ -54,11 +54,22 @@ class PostsController extends AppController
      */
     public function view($id = null)
     {
+        $comment = $this->Posts->Comments->newEntity();
+        if ($this->request->is('post')) {
+            $comment = $this->Posts->Comments->patchEntity($comment, $this->request->getData());
+            $comment->post_id = $id;
+            if ($this->Posts->Comments->save($comment)) {
+                $this->Flash->success(__('The comment has been saved.'));
+
+            } else {
+                $this->Flash->error(__('The comment could not be saved. Please, try again.'));
+            }
+        }
         $post = $this->Posts->get($id, [
             'contain' => ['Comments']
         ]);
-
         $this->set('post', $post);
+        $this->set(compact('comment', 'posts'));
         $this->set('_serialize', ['post']);
         $this->set(['title' => $post->title]);
     }
