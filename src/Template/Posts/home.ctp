@@ -2,7 +2,7 @@
     <?php foreach ($posts as $post) { ?>
         <hr />
         <article>
-            <h3><a href="#"><?= $post ['title'] ?></a></h3>
+            <h3><a href="/posts/view/<?= $post ['id'] ?>"><?= $post ['title'] ?></a></h3>
             <h6>Creado por <a href="#"><?= $post ['author'] ?></a></h6>
             <div class="row">
                 <div class="large-6 columns">
