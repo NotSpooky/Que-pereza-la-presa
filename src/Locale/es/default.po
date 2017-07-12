@@ -1,0 +1,729 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-07-12 03:32+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CommentsController.php:63;89
+#: Controller/PostsController.php:62
+msgid "The comment has been saved."
+msgstr "Se ha guardado el comentario."
+
+#: Controller/CommentsController.php:67;93
+#: Controller/PostsController.php:65
+msgid "The comment could not be saved. Please, try again."
+msgstr "No se pudo guardar el comentario, inténtelo nuevamente."
+
+#: Controller/CommentsController.php:113
+msgid "The comment has been deleted."
+msgstr "Se borró el comentario."
+
+#: Controller/CommentsController.php:115
+msgid "The comment could not be deleted. Please, try again."
+msgstr "No se pudo borrar el comentario, inténtelo nuevamente."
+
+#: Controller/GalleryController.php:74;99
+msgid "The gallery has been saved."
+msgstr "Se guardaron los datos de galería."
+
+#: Controller/GalleryController.php:78;103
+msgid "The gallery could not be saved. Please, try again."
+msgstr "No se pudo guardar los cambios de galería, favor intentar nuevamente."
+
+#: Controller/GalleryController.php:122
+msgid "The gallery has been deleted."
+msgstr "Se borraron datos de la galería correctamente."
+
+#: Controller/GalleryController.php:124
+msgid "The gallery could not be deleted. Please, try again."
+msgstr "No se pudo borrar los datos de la galería, favor intentar nuevamente."
+
+#: Controller/PostsController.php:88;115
+msgid "The post has been saved."
+msgstr "Se ha guardado la publicación."
+
+#: Controller/PostsController.php:92;119
+msgid "The post could not be saved. Please, try again."
+msgstr "No se pudo guardar correctamente la publicación, favor intentar nuevamente."
+
+#: Controller/PostsController.php:139
+msgid "The post has been deleted."
+msgstr "Se ha eliminado la publicación."
+
+#: Controller/PostsController.php:141
+msgid "The post could not be deleted. Please, try again."
+msgstr "No se pudo eliminar la publicación, favor intentarlo nuevamente."
+
+#: Controller/QuestionsController.php:57;82
+msgid "The question has been saved."
+msgstr "Se ha guardado la pregunta."
+
+#: Controller/QuestionsController.php:61;86
+msgid "The question could not be saved. Please, try again."
+msgstr "No fue posible guardar la pregunta, favor intentarlo nuevamente."
+
+#: Controller/QuestionsController.php:104
+msgid "The question has been deleted."
+msgstr "Se ha eliminado la pregunta."
+
+#: Controller/QuestionsController.php:106
+msgid "The question could not be deleted. Please, try again."
+msgstr "No se pudo eliminar la pregunta, favor intentar nuevamente."
+
+#: Controller/UsersController.php:23
+msgid "Invalid username or password, try again"
+msgstr "Nombre de usuario o correo incorrectos, favor intentar nuevamente."
+
+#: Controller/UsersController.php:82;107
+msgid "The user has been saved."
+msgstr "Se ha guardado el usuario."
+
+#: Controller/UsersController.php:86;111
+msgid "The user could not be saved. Please, try again."
+msgstr "No fue posible guardar el usuario, favor intentarlo nuevamente."
+
+#: Controller/UsersController.php:130
+msgid "The user has been deleted."
+msgstr "Se ha borrado el usuario."
+
+#: Controller/UsersController.php:132
+msgid "The user could not be deleted. Please, try again."
+msgstr "No fue posible eliminar el usuario. Favor intentar nuevamente."
+
+#: Template/Comments/add.ctp:8
+#: Template/Comments/edit.ctp:8
+#: Template/Comments/index.ctp:9;25
+#: Template/Comments/view.ctp:9
+#: Template/Gallery/add.ctp:8
+#: Template/Gallery/edit.ctp:8
+#: Template/Gallery/index.ctp:9;23
+#: Template/Gallery/view.ctp:9
+#: Template/Posts/add.ctp:8
+#: Template/Posts/edit.ctp:8
+#: Template/Posts/index.ctp:9;25
+#: Template/Questions/add.ctp:8
+#: Template/Questions/edit.ctp:8
+#: Template/Questions/index.ctp:9;21
+#: Template/Questions/view.ctp:9
+#: Template/Users/add.ctp:8
+#: Template/Users/edit.ctp:8
+#: Template/Users/index.ctp:8;21
+#: Template/Users/view.ctp:8
+msgid "Actions"
+msgstr "Acciones"
+
+#: Template/Comments/add.ctp:9
+#: Template/Comments/edit.ctp:15
+#: Template/Comments/view.ctp:12
+#: Template/Posts/add.ctp:10
+#: Template/Posts/edit.ctp:16
+#: Template/Posts/index.ctp:11
+msgid "List Comments"
+msgstr "Listar comentarios"
+
+#: Template/Comments/add.ctp:10
+#: Template/Comments/edit.ctp:16
+#: Template/Comments/index.ctp:11
+#: Template/Comments/view.ctp:14
+#: Template/Posts/add.ctp:9
+#: Template/Posts/edit.ctp:15
+msgid "List Posts"
+msgstr "Listar publicaciones"
+
+#: Template/Comments/add.ctp:11
+#: Template/Comments/edit.ctp:17
+#: Template/Comments/index.ctp:12
+#: Template/Comments/view.ctp:15
+#: Template/Posts/index.ctp:10
+msgid "New Post"
+msgstr "Nueva publicación"
+
+#: Template/Comments/add.ctp:17
+#: Template/Posts/view.ctp:17
+msgid "Add Comment"
+msgstr "Agregar comentario"
+
+#: Template/Comments/add.ctp:25
+#: Template/Comments/edit.ctp:31
+#: Template/Gallery/add.ctp:22
+#: Template/Gallery/edit.ctp:28
+#: Template/Posts/add.ctp:27
+#: Template/Posts/edit.ctp:33
+#: Template/Posts/view.ctp:24
+#: Template/Questions/add.ctp:21
+#: Template/Questions/edit.ctp:27
+#: Template/Users/add.ctp:22
+#: Template/Users/edit.ctp:28
+#: View/Helper/FormHelper.php:1896
+msgid "Submit"
+msgstr "Enviar"
+
+#: Template/Comments/edit.ctp:10
+#: Template/Comments/index.ctp:39
+#: Template/Gallery/edit.ctp:10
+#: Template/Gallery/index.ctp:37
+#: Template/Posts/edit.ctp:10
+#: Template/Posts/index.ctp:39
+#: Template/Questions/edit.ctp:10
+#: Template/Questions/index.ctp:33
+#: Template/Users/edit.ctp:10
+#: Template/Users/index.ctp:34
+msgid "Delete"
+msgstr "Eliminar"
+
+#: Template/Comments/edit.ctp:12
+#: Template/Comments/index.ctp:39
+#: Template/Comments/view.ctp:11
+#: Template/Gallery/edit.ctp:12
+#: Template/Gallery/index.ctp:37
+#: Template/Gallery/view.ctp:11
+#: Template/Posts/edit.ctp:12
+#: Template/Posts/index.ctp:39
+#: Template/Questions/edit.ctp:12
+#: Template/Questions/index.ctp:33
+#: Template/Questions/view.ctp:11
+#: Template/Users/edit.ctp:12
+#: Template/Users/index.ctp:34
+#: Template/Users/view.ctp:10
+msgid "Are you sure you want to delete # {0}?"
+msgstr "¿Seguro que desea eliminar # {0}?"
+
+#: Template/Comments/edit.ctp:23
+#: Template/Comments/view.ctp:10
+msgid "Edit Comment"
+msgstr "Editar comentario"
+
+#: Template/Comments/index.ctp:10
+#: Template/Comments/view.ctp:13
+#: Template/Posts/add.ctp:11
+#: Template/Posts/edit.ctp:17
+#: Template/Posts/index.ctp:12
+msgid "New Comment"
+msgstr "Agregar comentario"
+
+#: Template/Comments/index.ctp:16
+#: Template/Posts/view.ctp:28
+msgid "Comments"
+msgstr "Comentarios"
+
+#: Template/Comments/index.ctp:37
+#: Template/Gallery/index.ctp:35
+#: Template/Posts/index.ctp:37
+#: Template/Questions/index.ctp:31
+#: Template/Users/index.ctp:32
+msgid "View"
+msgstr "Ver"
+
+#: Template/Comments/index.ctp:38
+#: Template/Gallery/index.ctp:36
+#: Template/Posts/index.ctp:38
+#: Template/Questions/index.ctp:32
+#: Template/Users/index.ctp:33
+msgid "Edit"
+msgstr "Editar"
+
+#: Template/Comments/index.ctp:47
+#: Template/Gallery/index.ctp:45
+#: Template/Posts/index.ctp:47
+#: Template/Questions/index.ctp:41
+#: Template/Users/index.ctp:42
+msgid "first"
+msgstr "primero"
+
+#: Template/Comments/index.ctp:48
+#: Template/Gallery/index.ctp:46
+#: Template/Posts/index.ctp:48
+#: Template/Questions/index.ctp:42
+#: Template/Users/index.ctp:43
+msgid "previous"
+msgstr "anterior"
+
+#: Template/Comments/index.ctp:50
+#: Template/Gallery/index.ctp:48
+#: Template/Posts/index.ctp:50
+#: Template/Questions/index.ctp:44
+#: Template/Users/index.ctp:45
+msgid "next"
+msgstr "siguiente"
+
+#: Template/Comments/index.ctp:51
+#: Template/Gallery/index.ctp:49
+#: Template/Posts/index.ctp:51
+#: Template/Questions/index.ctp:45
+#: Template/Users/index.ctp:46
+msgid "last"
+msgstr "fin"
+
+#: Template/Comments/index.ctp:53
+#: Template/Gallery/index.ctp:51
+#: Template/Posts/index.ctp:53
+#: Template/Questions/index.ctp:47
+#: Template/Users/index.ctp:48
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr "Pagina {{page} de {pages}}, mostrando {{current}} de {{count}}"
+
+#: Template/Comments/view.ctp:11
+msgid "Delete Comment"
+msgstr "Eliminar comentario"
+
+#: Template/Comments/view.ctp:22
+msgid "Post"
+msgstr "Publicación"
+
+#: Template/Comments/view.ctp:26
+msgid "Text"
+msgstr "Texto"
+
+#: Template/Comments/view.ctp:30
+#: Template/Users/view.ctp:19
+msgid "Username"
+msgstr "Nombre"
+
+#: Template/Comments/view.ctp:34
+#: Template/Users/view.ctp:27
+msgid "Email"
+msgstr "Correo"
+
+#: Template/Comments/view.ctp:38
+#: Template/Gallery/view.ctp:32
+#: Template/Questions/view.ctp:28
+#: Template/Users/view.ctp:31
+msgid "Id"
+msgstr "Id"
+
+#: Template/Gallery/add.ctp:9
+#: Template/Gallery/edit.ctp:15
+#: Template/Gallery/view.ctp:12
+msgid "List Gallery"
+msgstr "Listar imágenes"
+
+#: Template/Gallery/add.ctp:15
+msgid "Add Gallery"
+msgstr "Agregar imagen"
+
+#: Template/Gallery/edit.ctp:21
+#: Template/Gallery/view.ctp:10
+msgid "Edit Gallery"
+msgstr "Editar imagen"
+
+#: Template/Gallery/index.ctp:10
+#: Template/Gallery/view.ctp:13
+msgid "New Gallery"
+msgstr "Nueva imagen"
+
+#: Template/Gallery/index.ctp:14
+msgid "Gallery"
+msgstr "Galería"
+
+#: Template/Gallery/view.ctp:11
+msgid "Delete Gallery"
+msgstr "Eliminar imagen"
+
+#: Template/Gallery/view.ctp:20
+msgid "Photo"
+msgstr "Imagen"
+
+#: Template/Gallery/view.ctp:24
+msgid "Title"
+msgstr "Título"
+
+#: Template/Gallery/view.ctp:28
+msgid "Description"
+msgstr "Descripción"
+
+#: Template/Gallery/view.ctp:36
+msgid "Created"
+msgstr "Creado"
+
+#: Template/Layout/error.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Error"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Volver"
+
+#: Template/Posts/add.ctp:17
+msgid "Add Post"
+msgstr "Agregar publicación"
+
+#: Template/Posts/edit.ctp:23
+msgid "Edit Post"
+msgstr "Editar publicación"
+
+#: Template/Posts/index.ctp:16
+msgid "Posts"
+msgstr "Publicaciones"
+
+#: Template/Posts/rss/index.ctp:3
+msgid "Most Recent Posts"
+msgstr "Publicaciones recientes"
+
+#: Template/Posts/rss/index.ctp:5
+msgid "Most recent posts."
+msgstr "Publicaciones recientes"
+
+#: Template/Questions/add.ctp:9
+#: Template/Questions/edit.ctp:15
+#: Template/Questions/view.ctp:12
+msgid "List Questions"
+msgstr "Listar preguntas"
+
+#: Template/Questions/add.ctp:15
+msgid "Add Question"
+msgstr "Agregar preguntas"
+
+#: Template/Questions/edit.ctp:21
+#: Template/Questions/view.ctp:10
+msgid "Edit Question"
+msgstr "Editar pregunta"
+
+#: Template/Questions/index.ctp:10
+#: Template/Questions/view.ctp:13
+msgid "New Question"
+msgstr "Agregar pregunta"
+
+#: Template/Questions/index.ctp:14
+msgid "Questions"
+msgstr "Preguntas"
+
+#: Template/Questions/view.ctp:11
+msgid "Delete Question"
+msgstr "Eliminar pregunta"
+
+#: Template/Questions/view.ctp:20
+msgid "Question"
+msgstr "Pregunta"
+
+#: Template/Questions/view.ctp:24
+msgid "Answer"
+msgstr "Respuesta"
+
+#: Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:15
+#: Template/Users/view.ctp:11
+msgid "List Users"
+msgstr "Listar usuarios"
+
+#: Template/Users/add.ctp:15
+msgid "Add User"
+msgstr "Agregar usuario"
+
+#: Template/Users/edit.ctp:21
+#: Template/Users/view.ctp:9
+msgid "Edit User"
+msgstr "Editar usuario"
+
+#: Template/Users/index.ctp:9
+#: Template/Users/view.ctp:12
+msgid "New User"
+msgstr "Nuevo usuario"
+
+#: Template/Users/index.ctp:13
+msgid "Users"
+msgstr "Usuarios"
+
+#: Template/Users/login.ctp:7
+msgid "Please enter your username and password"
+msgstr "Favor ingresar su nombre de usuario y contraseña"
+
+#: Template/Users/login.ctp:11
+msgid "Login"
+msgstr "Inicio de sesión"
+
+#: Template/Users/view.ctp:10
+msgid "Delete User"
+msgstr "Eliminar usuario"
+
+#: Template/Users/view.ctp:23
+msgid "Password"
+msgstr "Contraseña"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "La dirección solicitada {0} no se encontró en este servidor."
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Error interno"
+
+#: Controller/Component/AuthComponent.php:496
+msgid "You are not authorized to access that location."
+msgstr "No está autorizado para accesar esa ubicación."
+
+#: Controller/Component/CsrfComponent.php:155
+msgid "Missing CSRF token cookie"
+msgstr "Falta token cookie CSRF"
+
+#: Controller/Component/CsrfComponent.php:159
+msgid "CSRF token mismatch."
+msgstr "No coincide el token CSRF"
+
+#: Error/ExceptionRenderer.php:258
+msgid "Not Found"
+msgstr "No se encontró"
+
+#: Error/ExceptionRenderer.php:260
+msgid "An Internal Error Has Occurred."
+msgstr "Ocurrió un error interno"
+
+#: Http/Response.php:2258
+msgid "The requested file contains `..` and will not be read."
+msgstr "El archivo solicitado contiene `..` y no se leerá."
+
+#: Http/Response.php:2269
+msgid "The requested file was not found"
+msgstr "No se encontró el archivo solicitado"
+
+#: I18n/Number.php:90
+msgid "{0,number,#,###.##} KB"
+msgstr "{0,number,#,###.##} KB"
+
+#: I18n/Number.php:92
+msgid "{0,number,#,###.##} MB"
+msgstr "{0,number,#,###.##} MB"
+
+#: I18n/Number.php:94
+msgid "{0,number,#,###.##} GB"
+msgstr "{0,number,#,###.##} GB" 
+
+#: I18n/Number.php:96
+msgid "{0,number,#,###.##} TB"
+msgstr "{0,number,#,###.##} TB"
+
+#: I18n/Number.php:88
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] "{0,number,integer} Byte"
+msgstr[1] "{0,number,integer} Bytes"
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "{0} desde ahora"
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "hace {0}"
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr "{0} después"
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr "{0} antes"
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr "justo ahora"
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr "hace alrededor de un segundo"
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr "hace alrededor de un minuto"
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr "hace alrededor de una hora"
+
+#: I18n/RelativeTimeFormatter.php:154;332
+msgid "about a day ago"
+msgstr "hace alrededor de un día"
+
+#: I18n/RelativeTimeFormatter.php:155;333
+msgid "about a week ago"
+msgstr "hace alrededor de una semana"
+
+#: I18n/RelativeTimeFormatter.php:156;334
+msgid "about a month ago"
+msgstr "hace alrededor de un mes"
+
+#: I18n/RelativeTimeFormatter.php:157;335
+msgid "about a year ago"
+msgstr "hace alrededor de un año"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr "en alrededor de un segundo"
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr "en alrededor de un minuto"
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr "en alrededor de una hora"
+
+#: I18n/RelativeTimeFormatter.php:171;346
+msgid "in about a day"
+msgstr "en alrededor de un día"
+
+#: I18n/RelativeTimeFormatter.php:172;347
+msgid "in about a week"
+msgstr "en alrededor de una semana"
+
+#: I18n/RelativeTimeFormatter.php:173;348
+msgid "in about a month"
+msgstr "en alrededor de un mes"
+
+#: I18n/RelativeTimeFormatter.php:174;349
+msgid "in about a year"
+msgstr "en alrededor de un año"
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr "hoy"
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr "hace %s"
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr "en %s"
+
+#: I18n/RelativeTimeFormatter.php:47;126;316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} año"
+msgstr[1] "{0} años"
+
+#: I18n/RelativeTimeFormatter.php:51;129;319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} mes"
+msgstr[1] "{0} meses"
+
+#: I18n/RelativeTimeFormatter.php:57;132;322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} semana"
+msgstr[1] "{0} semanas"
+
+#: I18n/RelativeTimeFormatter.php:59;135;325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} día"
+msgstr[1] "{0} días"
+
+#: I18n/RelativeTimeFormatter.php:64;138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} hora"
+msgstr[1] "{0} horas"
+
+#: I18n/RelativeTimeFormatter.php:68;141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minuto"
+msgstr[1] "{0} minutos"
+
+#: I18n/RelativeTimeFormatter.php:72;144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} segundo"
+msgstr[1] "{0} segundos"
+
+#: ORM/RulesChecker.php:57
+msgid "This value is already in use"
+msgstr "Este valor ya está en uso"
+
+#: ORM/RulesChecker.php:104
+msgid "This value does not exist"
+msgstr "Este valor no existe"
+
+#: ORM/RulesChecker.php:128
+msgid "The count does not match {0}{1}"
+msgstr "El contador no coincide {0}{1}"
+
+#: Utility/Text.php:899
+msgid "and"
+msgstr "y"
+
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr "Este campo es requerido"
+
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr "Este campo no puede dejarse vacío"
+
+#: Validation/Validator.php:1801
+msgid "The provided value is invalid"
+msgstr "El valor proporcionado es inválido"
+
+#: View/Helper/FormHelper.php:1016
+msgid "New %s"
+msgstr "Nuevo/a %s"
+
+#: View/Helper/FormHelper.php:1019
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: View/Helper/HtmlHelper.php:794
+msgid "Home"
+msgstr "Principal"
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "January"
+msgstr "Enero"
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "February"
+msgstr "Febrero"
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "March"
+msgstr "Marzo"
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "April"
+msgstr "Abril"
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "May"
+msgstr "Mayo"
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "June"
+msgstr "Junio"
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "July"
+msgstr "Julio"
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "August"
+msgstr "Agosto"
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "September"
+msgstr "Setiembre"
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "October"
+msgstr "Octubre"
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "November"
+msgstr "Noviembre"
+
+#: View/Widget/DateTimeWidget.php:551
+msgid "December"
+msgstr "Diciembre"
+
