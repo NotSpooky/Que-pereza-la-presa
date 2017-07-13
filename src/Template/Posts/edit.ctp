@@ -3,6 +3,11 @@
   * @var \App\View\AppView $this
   */
 ?>
+<script>
+    function addImage () {
+        document.getElementById ("image").innerHTML = '<?= $this->Form->input('photo', ['type' => 'file']) ?>';
+    }
+</script>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -35,12 +40,3 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
-<script>
-    function addImage () {
-        var para = document.createElement("p");
-        var node = document.createTextNode ("sleep");
-        para.appendChild (node);
-        document.getElementById ("image").innerHTML = '<?= $this->Form->input('photo', ['type' => 'file']) ?>';
-        //document.getElementById("image").insertBefore (document.createElement ("p"), document.getElementById("summary"));
-    }
-</script>
