@@ -24,8 +24,9 @@ class PostsController extends AppController
     public function home()
     {
 		$this->set('title', 'Qué pereza la presa');
-        $posts = $this->paginate($this->Posts);
+        $posts = $this->paginate($this->Posts, ['order' => ['created' => 'desc']]);
 
+        $this->set('content', 'Sleep');
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);
     }
@@ -142,5 +143,10 @@ class PostsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
     }
 }

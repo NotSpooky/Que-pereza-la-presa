@@ -14,6 +14,7 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +25,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		<?php if (isset($title)) {
 			echo $title;
 		} else {
-			echo $cakeDescription. ':' . $this->fetch('title'); 
+			echo $this->fetch('title'); 
 		} ?>
     </title>
     <?= $this->Html->meta('icon') ?>

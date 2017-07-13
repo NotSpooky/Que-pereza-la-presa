@@ -7,6 +7,7 @@
 <!-- El padding bottom es para arreglar un bug -->
 <div class="posts view large-9 medium-8 columns content" style="padding-bottom: 0px;">
     <h3><?= h($post->title) ?></h3>
+    <h6>Última edición: <?= $post->modified ?>, Creado por <a href="#"><?= $post->author ?></a></h6>
     <?php if (isset ($post->photo) && $post->photo != '') {
         echo '<img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post -> photo.'" />';
     } ?>
