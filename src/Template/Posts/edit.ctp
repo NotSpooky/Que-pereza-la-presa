@@ -19,12 +19,14 @@
 </nav>
 <div class="posts form large-9 medium-8 columns content">
     <?= $this->Form->create($post, ['type' => 'file']) ?>
-    <fieldset>
+    <fieldset id="form">
         <legend><?= __('Edit Post') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->input('photo', ['type' => 'file']);
-            echo '<img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'].'" width="200" height="200" />';
+            echo '<div id="image">
+                <img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'].'" width="200" height="200" />
+                <button type="button" onclick="addImage()">Editar imagen</button>
+            </div>';
             echo $this->Form->control('summary');
             echo $this->Form->control('text');
             echo $this->Form->control('author');
@@ -33,3 +35,12 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+<script>
+    function addImage () {
+        var para = document.createElement("p");
+        var node = document.createTextNode ("sleep");
+        para.appendChild (node);
+        document.getElementById ("image").innerHTML = '<?= $this->Form->input('photo', ['type' => 'file']) ?>';
+        //document.getElementById("image").insertBefore (document.createElement ("p"), document.getElementById("summary"));
+    }
+</script>
