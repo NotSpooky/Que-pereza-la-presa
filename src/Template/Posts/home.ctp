@@ -3,7 +3,7 @@
         <hr />
         <article>
             <h3><a href="/posts/view/<?= $post ['id'] ?>"><?= $post ['title'] ?></a></h3>
-            <h6>Creado por <a href="#"><?= $post ['author'] ?></a></h6>
+            <h6>Creado por <?= $post ['author'] ?></h6>
             <div class="row">
                 <div class="large-6 columns">
                     <p><?= $post ['summary'] ?></p>
