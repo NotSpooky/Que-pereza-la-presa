@@ -270,7 +270,7 @@ msgstr "fin"
 #: Template/Questions/index.ctp:47
 #: Template/Users/index.ctp:48
 msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
-msgstr "Pagina {{page} de {pages}}, mostrando {{current}} de {{count}}"
+msgstr "Página {{page}} de {{pages}}, mostrando {{current}} de {{count}}"
 
 #: Template/Comments/view.ctp:11
 msgid "Delete Comment"
