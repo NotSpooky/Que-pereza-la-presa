@@ -68,7 +68,12 @@ class GalleryController extends AppController
     {
         $this->set(['title' => 'Agregando en galería', 'isAdmin' => true]);
         $gallery = $this->Gallery->newEntity();
-        if ($this->request->is('post')) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is('post')) {
             $gallery = $this->Gallery->patchEntity($gallery, $this->request->getData());
             if ($this->Gallery->save($gallery)) {
                 $this->Flash->success(__('The gallery has been saved.'));
@@ -93,7 +98,12 @@ class GalleryController extends AppController
         $gallery = $this->Gallery->get($id, [
             'contain' => []
         ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is(['patch', 'post', 'put'])) {
             $gallery = $this->Gallery->patchEntity($gallery, $this->request->getData());
             if ($this->Gallery->save($gallery)) {
                 $this->Flash->success(__('The gallery has been saved.'));

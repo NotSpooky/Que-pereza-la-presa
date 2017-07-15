@@ -83,7 +83,12 @@ class PostsController extends AppController
     public function add()
     {
         $post = $this->Posts->newEntity();
-        if ($this->request->is('post')) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is('post')) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
             if ($this->Posts->save($post)) {
                 $this->Flash->success(__('The post has been saved.'));
@@ -110,7 +115,12 @@ class PostsController extends AppController
         $post = $this->Posts->get($id, [
             'contain' => []
         ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is(['patch', 'post', 'put'])) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
             if ($this->Posts->save($post)) {
                 $this->Flash->success(__('The post has been saved.'));
