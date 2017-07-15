@@ -24,7 +24,7 @@ class PostsController extends AppController
     public function home()
     {
 		$this->set('title', 'Qué pereza la presa');
-        $posts = $this->paginate($this->Posts, ['order' => ['created' => 'desc']]);
+        $posts = $this->paginate($this->Posts, ['order' => ['created' => 'desc'], 'limit' => 10]);
 
         $this->set('content', 'Sleep');
         $this->set(compact('posts'));

@@ -11,6 +11,7 @@ use Cake\ORM\Entity;
  * @property string $text
  * @property string $username
  * @property string $email
+ * @property \Cake\I18n\FrozenTime $created
  *
  * @property \App\Model\Entity\Post $post
  */

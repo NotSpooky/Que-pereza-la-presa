@@ -18,6 +18,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Comment patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Comment[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Comment findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class CommentsTable extends Table
 {
@@ -35,6 +37,8 @@ class CommentsTable extends Table
         $this->setTable('comments');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->addBehavior('Timestamp');
 
         $this->belongsTo('Posts', [
             'foreignKey' => 'post_id',
