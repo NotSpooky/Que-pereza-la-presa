@@ -59,7 +59,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <div class="nav-bar right">
 
                 </div>
-                <h1><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" />Qué pereza la presa</h1>
+                <h1><a href="/"><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" alt="Logo" />Qué pereza la presa</a></h1>
                 <hr />
             </div>
         </div>
