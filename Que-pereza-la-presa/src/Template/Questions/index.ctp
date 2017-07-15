@@ -5,8 +5,7 @@
   */
 ?>
 
-
-<div class="container">
+<div class="question index large-9 medium-8 columns content">
     <br />
     <br />
     <br />
@@ -26,9 +25,11 @@
                 </div>
             </div>
         </div>
+        
+        
         <?php endforeach; ?>
     </div>
 </div>
-
+</html>
 
 <!--http://www.prepbootstrap.com/bootstrap-template/faq-example-->

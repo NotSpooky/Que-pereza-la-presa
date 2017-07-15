@@ -35,6 +35,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('cake.css') ;?>
     <?= $this->Html->css('topnav.css');?>
      <?= $this->Html->script('topnav.js');?>
+     <?= $this->Html->css('faq.css');?>
 
     <?= $this->fetch('meta')?>
     <?= $this->fetch('css')?>
