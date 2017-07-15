@@ -14,15 +14,11 @@
     </ul>
 </nav>
 <div class="gallery view large-9 medium-8 columns content">
-    <h3><?= h($gallery->title) ?></h3>
+    <h3><?= h($gallery->description) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Photo') ?></th>
             <td><?= h($gallery->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($gallery->title) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Description') ?></th>

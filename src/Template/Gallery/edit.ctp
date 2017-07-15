@@ -29,7 +29,6 @@
                 <img src="'.DS.'files'.DS.'Gallery'.DS.'photo'.DS.$gallery ['photo'].'" width="200" height="200" />
                 <button type="button" onclick="addImage()">Editar imagen</button>
             </div>';
-            echo $this->Form->control('title');
             echo $this->Form->control('description');
         ?>
     </fieldset>
