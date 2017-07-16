@@ -112,8 +112,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <aside class="large-3 columns">
                     <button>Donaciones</button>
                     <ul class="side-nav">
+                        <li><a href="/">Página principal</a></li>
                         <li><a href="/gallery/list">Galería</a></li>
-                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="/questions/list">Preguntas frecuentes</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
                     <div class="panel">

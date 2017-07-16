@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Questions Controller
@@ -12,6 +13,21 @@ use App\Controller\AppController;
  */
 class QuestionsController extends AppController
 {
+    public function beforeFilter (Event $event) {
+        parent::beforeFilter ($event);
+        $this->Auth->allow (['list']);
+    }
+
+    /**
+     * Shows the FAQ (for non-admins).
+     */
+    public function list () {
+        $this->set('title', 'Preguntas frecuentes');
+        $questions = $this->paginate($this->Questions);
+
+        $this->set(compact('questions'));
+        $this->set('_serialize', ['questions']);
+    }
 
     /**
      * Index method
@@ -24,6 +40,8 @@ class QuestionsController extends AppController
 
         $this->set(compact('questions'));
         $this->set('_serialize', ['questions']);
+        $this->set(['title' => 'Preguntas frecuentes', 'isAdmin' => true]);
+
     }
 
     /**
@@ -41,6 +59,7 @@ class QuestionsController extends AppController
 
         $this->set('question', $question);
         $this->set('_serialize', ['question']);
+        $this->set(['title' => $question->question, 'isAdmin' => true]);
     }
 
     /**
@@ -62,6 +81,7 @@ class QuestionsController extends AppController
         }
         $this->set(compact('question'));
         $this->set('_serialize', ['question']);
+        $this->set(['title' => 'Agregando pregunta frecuente', 'isAdmin' => true]);
     }
 
     /**
@@ -87,6 +107,7 @@ class QuestionsController extends AppController
         }
         $this->set(compact('question'));
         $this->set('_serialize', ['question']);
+        $this->set(['title' => 'Editando '.$question->question, 'isAdmin' => true]);
     }
 
     /**
