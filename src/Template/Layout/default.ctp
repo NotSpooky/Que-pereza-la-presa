@@ -57,6 +57,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #upButton:hover {
           background-color: #55F;
         }
+
+        #topbar {
+          border-radius: 20px;
+          background-color: #CCCCFF;
+        }
+        #topbar a {
+           color: #0071bc; 
+           font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -95,13 +104,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
         </nav>
     <?php } else { // Barra de navegación normal ?>
-        <div class="row">
+        <div class="row" id="topbar">
             <div class="large-12 columns">
                 <div class="nav-bar right">
 
                 </div>
-                <h1><a href="/"><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" alt="Logo" />Qué pereza la presa</a></h1>
-                <hr />
+                <h1><a href="/"><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" alt="Logo" />Qué Pereza la Presa</a></h1>
             </div>
         </div>
     <?php } ?>
