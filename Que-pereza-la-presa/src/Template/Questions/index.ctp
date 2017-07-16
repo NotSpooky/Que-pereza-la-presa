@@ -16,17 +16,19 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle" data-parent="#accordion" href="#<?= h($question->id) ?>"><?= h($question->question) ?></a>
+                    <span><a class="accordion-toggle" data-parent="#accordion" href="#<?= h($question->id) ?>"><?= h($question->question) ?></a></span>
                 </h4>
             </div>
+            <td class="actions">
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $question->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $question->id], ['confirm' => __('Estas seguro de que quieres eliminar esta pregunta?')]) ?>
+                </td>
             <div id="<?= h($question->id) ?>" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <?= h($question->answer) ?> 
                 </div>
             </div>
         </div>
-        
-        
         <?php endforeach; ?>
     </div>
 </div>
