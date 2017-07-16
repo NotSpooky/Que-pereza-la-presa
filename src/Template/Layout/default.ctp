@@ -61,6 +61,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #topbar {
           border-radius: 20px;
           background-color: #CCCCFF;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
         }
         #topbar a {
            color: #0071bc; 
