@@ -33,7 +33,7 @@ class GalleryTable extends Table
         parent::initialize($config);
 
         $this->setTable('gallery');
-        $this->setDisplayField('title');
+        $this->setDisplayField('description');
         $this->setPrimaryKey('id');
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => []
@@ -57,10 +57,6 @@ class GalleryTable extends Table
         $validator
             ->requirePresence('photo', 'create')
             ->notEmpty('photo');
-
-        $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
 
         $validator
             ->requirePresence('description', 'create')

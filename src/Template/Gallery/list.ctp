@@ -26,7 +26,7 @@
                 <a href="<?= $photoPath ?>" itemprop="contentUrl" data-size="768x768">
                     <img width="230" height="230" src="<?= $photoPath ?>" itemprop="thumbnail" alt="<?= $photo ['description'] ?>" />
                 </a>
-                <figcaption style="display: none" itemprop="caption description"><?= $photo ['title'] ?></figcaption>
+                <figcaption style="display: none" itemprop="caption description"><?= $photo ['description'] ?></figcaption>
             </figure>
         </div>
     <?php } ?>

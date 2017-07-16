@@ -17,7 +17,6 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -28,7 +27,6 @@
             <tr>
                 <td><?= $this->Number->format($gallery->id) ?></td>
                 <td><?= h($gallery->photo) ?></td>
-                <td><?= h($gallery->title) ?></td>
                 <td><?= h($gallery->description) ?></td>
                 <td><?= h($gallery->created) ?></td>
                 <td class="actions">
