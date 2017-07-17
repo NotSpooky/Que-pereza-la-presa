@@ -89,7 +89,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           color: #0071bc; 
         }
         article {
-          background-color: white;
+          background-color: #8cb1c5;
           border-radius: 10px;
           padding: 15px;
         }
