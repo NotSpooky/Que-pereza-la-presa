@@ -89,16 +89,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           color: #0071bc; 
         }
         article {
-          background-color: #daeaf9;
+          background-color: white;
           border-radius: 10px;
           padding: 15px;
         }
         article img {
-          margin-bottom: 20px;
+          margin-bottom: 25px;
           border-radius: 8px;
         }
         article h3 a{
           color: #0071bc;
+          font-size: 2.1rem;
         }
         article .row p{
           font-size: 1.4rem;

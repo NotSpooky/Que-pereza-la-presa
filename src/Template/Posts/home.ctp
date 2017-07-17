@@ -4,14 +4,15 @@
             <h3><a href="/posts/view/<?= $post ['id'] ?>"><?= $post ['title'] ?></a></h3>
             <h6>Creado por <?= $post ['author'] ?></h6>
             <div class="row">
+                <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
+                <div class="large-6 columns">
+                    <img width="480" height="240" src='<?= DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'] ?>'></img>
+                </div>
+                <?php } ?>
                 <div class="large-6 columns">
                     <p><?= $post ['summary'] ?></p>
                 </div>
-            <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
-                <div class="large-6 columns">
-                    <img width="400" height="240" src='<?= DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'] ?>'></img>
-                </div>
-            <?php } ?>
+            
             </div>
         </article>
         <hr />
