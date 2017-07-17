@@ -78,7 +78,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    <a href="#contact">Informacion de contacto</a>
    <a href="#about">Acerca de nosotros</a>
    <a href="/gallery/index">Galeria</a>
-   <a href="posts/home">Home</a>
+   <a href="/posts/home">Home</a>
   <span><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></span></p>
 </div>
 
