@@ -79,6 +79,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color:  #cdcdcd;
           padding-top: 25px;
           border-radius: 20px;
+          border: solid aliceblue;
         }
         aside button{
           width:100%;
@@ -92,10 +93,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color: #8cb1c5;
           border-radius: 10px;
           padding: 15px;
+          border: 2px solid #5a8ab4;
         }
         article img {
           margin-bottom: 25px;
           border-radius: 8px;
+          border: 3px solid #5a8ab4;
+        }
+        article h3 {
+          margin-bottom: 8px;
         }
         article h3 a{
           color: #0071bc;
@@ -106,7 +112,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         <?php if (!isset($isAdmin) || !$isAdmin) { ?>
         body {
-          background-color: #ffffff;
+          background-color: #f5f4ff;
         }
         <?php } ?>
         hr {
