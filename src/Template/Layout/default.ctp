@@ -106,7 +106,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         <?php if (!isset($isAdmin) || !$isAdmin) { ?>
         body {
-          background-color: #177a86;
+          background-color: #ffffff;
         }
         <?php } ?>
         hr {
