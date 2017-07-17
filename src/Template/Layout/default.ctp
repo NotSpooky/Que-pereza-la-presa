@@ -112,7 +112,27 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         hr {
           border-width: 3px;
         }
-        
+        .content {
+          padding: 15px;
+        }
+        .content div {
+          border-radius: 10px;
+          background-color: white;
+          padding: 15px;
+        }
+        .content form div {
+          padding: 0px;
+        }
+        .content h3 {
+          color: #0071bc;
+        }
+        .content h4 {
+          color: #0071bc;
+          border-bottom: 2px solid #7f76bf;
+        }
+        .content img {
+          width: 100%;
+        }
         
     </style>
 </head>
