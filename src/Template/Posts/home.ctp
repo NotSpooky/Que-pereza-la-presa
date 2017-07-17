@@ -1,6 +1,5 @@
 <div class="large-9 columns" role="content">
     <?php foreach ($posts as $post) { ?>
-        <hr />
         <article>
             <h3><a href="/posts/view/<?= $post ['id'] ?>"><?= $post ['title'] ?></a></h3>
             <h6>Creado por <?= $post ['author'] ?></h6>
@@ -15,6 +14,7 @@
             <?php } ?>
             </div>
         </article>
+        <hr />
     <?php } ?>
     <div class="paginator">
         <ul class="pagination">
