@@ -133,6 +133,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .content img {
           width: 100%;
         }
+        .row .row {
+          padding-right: 20px;
+        }
         
     </style>
 </head>
