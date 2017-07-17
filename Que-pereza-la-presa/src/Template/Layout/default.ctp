@@ -60,7 +60,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="topnav" id="myTopnav">
        <p> <span><img src="/logo.png" width="60" height="60" style="margin: 10px;"/></span>
        <span style="color:white">Qué pereza la presa</span>
-       <span><a href="/post/add">Nueva publicacion</a>
+       <span><a href="/posts/add">Nueva publicacion</a>
        <span><a href="/users/index">Usuarios</a>
        <a href="/questions/index">Preguntas frecuentes</a>
        <a href="#contact">Informacion de contacto</a>
@@ -78,7 +78,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    <a href="#contact">Informacion de contacto</a>
    <a href="#about">Acerca de nosotros</a>
    <a href="/gallery/index">Galeria</a>
-   <a href="/post/index">Home</a>
+   <a href="posts/home">Home</a>
   <span><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></span></p>
 </div>
 
