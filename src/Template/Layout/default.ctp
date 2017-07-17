@@ -59,13 +59,81 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
 
         #topbar {
-          border-radius: 20px;
-          background-color: #CCCCFF;
+          border-radius: 15px;
+          background-color: #cdcdcd;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          text-align: center;
         }
         #topbar a {
-           color: #0071bc; 
-           font-style: italic;
+          color: #0071bc; 
+          font-style: italic;
         }
+        #topbar a img {
+            float:left;
+        }
+        
+        aside {
+          background-color:  #cdcdcd;
+          padding-top: 25px;
+          border-radius: 20px;
+        }
+        aside button{
+          width:100%;
+          background-color: #026c59;
+          font-weight: bold;
+        }
+        .side-nav li a:not(.button) {
+          color: #0071bc; 
+        }
+        article {
+          background-color: #8cb1c5;
+          border-radius: 10px;
+          padding: 15px;
+        }
+        article img {
+          margin-bottom: 25px;
+          border-radius: 8px;
+        }
+        article h3 a{
+          color: #0071bc;
+          font-size: 2.1rem;
+        }
+        article .row p{
+          font-size: 1.4rem;
+        }
+        <?php if (!isset($isAdmin) || !$isAdmin) { ?>
+        body {
+          background-color: #ffffff;
+        }
+        <?php } ?>
+        hr {
+          border-width: 3px;
+        }
+        .content {
+          padding: 15px;
+        }
+        .content div {
+          border-radius: 10px;
+          background-color: white;
+          padding: 15px;
+        }
+        .content form div {
+          padding: 0px;
+        }
+        .content h3 {
+          color: #0071bc;
+        }
+        .content h4 {
+          color: #0071bc;
+          border-bottom: 2px solid #7f76bf;
+        }
+        .content img {
+          width: 100%;
+        }
+        
     </style>
 </head>
 <body>
@@ -106,10 +174,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php } else { // Barra de navegación normal ?>
         <div class="row" id="topbar">
             <div class="large-12 columns">
+                
+                <h1><a href="/"><img src="/logo.png" width="100" height="100" style="margin-right: 20px;" alt="Logo" />Qué Pereza la Presa</a></h1>
                 <div class="nav-bar right">
 
                 </div>
-                <h1><a href="/"><img src="/logo.png" width="80" height="80" style="margin-right: 20px;" alt="Logo" />Qué Pereza la Presa</a></h1>
             </div>
         </div>
     <?php } ?>
@@ -118,12 +187,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
             <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
                 <aside class="large-3 columns">
-                    <button>Donaciones</button>
+                    <button>Donar mediante Paypal</button>
                     <ul class="side-nav">
-                        <li><a href="/">Página principal</a></li>
+                        <li><a class="navbarlink" href="/">Página principal</a></li>
                         <li><a href="/gallery/list">Galería</a></li>
                         <li><a href="/questions/list">Preguntas frecuentes</a></li>
                         <li><a href="#">Contacto</a></li>
+                        <li><a href="/posts/home.rss"</a>Suscribirse</li>
                     </ul>
                     <div class="panel">
                         <h5>Lorem ipsum</h5>
