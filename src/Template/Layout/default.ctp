@@ -103,9 +103,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         article .row p{
           font-size: 1.4rem;
         }
+        <?php if (!isset($isAdmin) || !$isAdmin) { ?>
         body {
           background-color: #177a86;
         }
+        <?php } ?>
         hr {
           border-width: 3px;
         }
