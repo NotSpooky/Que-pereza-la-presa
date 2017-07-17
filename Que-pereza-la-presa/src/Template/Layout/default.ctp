@@ -55,7 +55,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
                     <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
                 </ul>
-            </div>
+            </div>git
         </nav-->
     <div class="topnav" id="myTopnav">
        <p> <span><img src="/logo.png" width="60" height="60" style="margin: 10px;"/></span>
@@ -66,7 +66,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
        <a href="#contact">Informacion de contacto</a>
        <a href="#about">Acerca de nosotros</a>
        <a href="/gallery/index">Galeria</a>
-       <a href="/post/home">Home</a>
+       <a href="/post/index">Home</a>
       <span><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></span></p>
     </div>
     <?php } else { // Barra de navegación normal ?>
@@ -78,7 +78,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    <a href="#contact">Informacion de contacto</a>
    <a href="#about">Acerca de nosotros</a>
    <a href="/gallery/index">Galeria</a>
-   <a href="/post/home">Home</a>
+   <a href="/post/index">Home</a>
   <span><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></span></p>
 </div>
 
@@ -99,6 +99,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
                 <aside class="large-3 columns">
                     <a href="https://www.paypal.me/andreagomezm" class="button">Donaciones</a><!--Esto es solo para probarlo. Hay que cambiar el link por el de los dueños del blog-->
+                    <br>
+                        <a href="https://www.facebook.com/queperezalapresa/">
+                          <img src="/fb2.png" width="40" height="40" style="margin: 10px;"/>
+                        </a>
+                    <a href="https://www.facebook.com/queperezalapresa/">
+                          <img src="/twitter4.png" width="40" height="40" style="margin: 10px;"/><!--Hay que cambiar el link. Esta disponible en twitter? Busque @perezalapresa y no me aparecio. -->
+                        </a>
                     <ul class="side-nav">
                         <li><a href="/gallery/list">Galería</a></li>
                         <li><a href="/questions/index">Preguntas frecuentes</a></li>
