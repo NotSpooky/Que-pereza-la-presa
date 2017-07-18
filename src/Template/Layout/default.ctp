@@ -227,7 +227,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
             <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
                 <aside class="large-3 columns">
+                  <a href="https://paypal.me/queperezalapresa">
                     <button>Donar mediante Paypal</button>
+                    </a>
                     <div class="glyph">
                       <div class="preview-glyphs">
                         <div>
