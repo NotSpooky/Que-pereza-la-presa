@@ -81,25 +81,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         aside button{
           width:100%;
-          background-color: #026c59;
           font-weight: bold;
-        }
-        .side-nav li a:not(.button) {
-          color: #0071bc; 
-        }
-        article {
-          background-color: #8cb1c5;
-          border-radius: 10px;
-          padding: 15px;
-          border: 2px solid #5a8ab4;
         }
         article a {
           color: #0071bc;
-        }
-        article img {
-          margin-bottom: 25px;
-          border-radius: 8px;
-          border: 3px solid #5a8ab4;
         }
         article h3 {
           margin-bottom: 8px;
@@ -115,16 +100,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color: #f5f4ff;
         }
         <?php } ?>
+
+        button {
+          background-color: #026c59;
+          border-radius: 10px;
+        }
         hr {
           border-width: 3px;
-        }
-        .content {
-          padding: 15px;
-        }
-        .content div {
-          border-radius: 10px;
-          background-color: white;
-          padding: 15px;
         }
         .content form div {
           padding: 0px;
@@ -135,6 +117,30 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .content h4 {
           color: #0071bc;
           border-bottom: 2px solid #7f76bf;
+        }
+        .main {
+          background-color: #8cb1c5;
+          border-radius: 10px;
+          border: 2px solid #5a8ab4;
+          padding: 15px;
+        }
+        .main input {
+          background-color: #d9e2e4;
+          border-color: #5a8ab4;
+        }
+        .main fieldset legend {
+          background-color: inherit;
+          color: #353B3C;
+        }
+        .main img {
+          margin-bottom: 25px;
+          margin-right: 20px;
+          border-radius: 8px;
+          border: 3px solid #5a8ab4;
+          float: left;
+        }
+        .side-nav li a:not(.button) {
+          color: #0071bc; 
         }
         .row .row {
           padding-right: 20px;

@@ -2,7 +2,7 @@
     <?php foreach ($posts as $post) { 
     $path = "'/posts/view/".$post->id."'"
     ?>
-        <article>
+        <article class="main">
             <h3><a href=<?= $path ?>><?= $post -> title ?></a></h3>
             <h6>Creado por <?= $post ['author'] ?></h6>
             <div class="row">

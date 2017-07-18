@@ -4,15 +4,15 @@
   * @var \App\Model\Entity\Post $post
   */
 ?>
-<!-- El padding bottom es para arreglar un bug -->
-<div class="posts view large-9 medium-8 columns content" style="padding-bottom: 0px;">
-    <div>
+<div class="posts view large-9 medium-8 columns content">
+    <div class="main">
         <h3><?= h($post->title) ?></h3>
-        <h6>Última edición: <?= $post->modified ?>, Creado por <?= $post->author ?></h6>
+        <h6>Última edición: <?= $post->modified ?></h6>
         <?php if (isset ($post->photo) && $post->photo != '') {
             echo '<img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post -> photo.'" />';
         } ?>
         <p><?= str_replace("\n", "<br />", $post->text) ?></p>
+        <h6>Creado por <?= $post->author ?></h6>
         <br />
         <hr />
         <h4><?= __('Comments') ?></h4>
