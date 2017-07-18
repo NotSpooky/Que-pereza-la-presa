@@ -32,6 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -148,7 +149,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #actions-sidebar {
           padding-bottom: 0px;
         }
+        .glyph {
+        border-bottom: 1px dotted #ccc;
+        padding: 10px 0 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .preview-glyphs { vertical-align: bottom; } 
+
+      .preview-scale { 
+        color: #888;
+        font-size: 12px; 
+        margin-top: 5px;
+      }
+
+      .step {
+        display: inline-block;
+        line-height: 1;
+        width: 10%;
+      }
+      .size-48 { font-size: 48px; }
+      .color-fb { color: #3b5998; }
+      .color-twitter { color: #00aced; }
         
+
     </style>
 </head>
 <body>
@@ -203,6 +228,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
                 <aside class="large-3 columns">
                     <button>Donar mediante Paypal</button>
+                    <div class="glyph">
+                      <div class="preview-glyphs">
+                        <div>
+                          <a href="https://www.facebook.com/queperezalapresa/">
+                            <i class="step fi-social-facebook size-48 color-fb" ></i>
+                          </a>
+                        </div>
+                        <div>
+                        <a href="https://twitter.com/qperezalapresa">
+                        <i class="step fi-social-twitter size-48 color-twitter" ></i>
+                         </a>
+                        <div>
+                      </div>
+                    </div>
                     <ul class="side-nav">
                         <li><a class="navbarlink" href="/">Página principal</a></li>
                         <li><a href="/gallery/list">Galería</a></li>
