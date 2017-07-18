@@ -12,7 +12,33 @@ class CreateAbout extends AbstractMigration
      */
     public function change()
     {
+
         $table = $this->table('about');
+        $table->addColumn('photo', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+
+        $table->addColumn('text', 'text', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('title', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+        $table->addColumn('created', 'datetime', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('modified', 'datetime', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->create();
+    
         $table->create();
     }
 }
