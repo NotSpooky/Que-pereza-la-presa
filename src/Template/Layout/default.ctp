@@ -93,6 +93,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           padding: 15px;
           border: 2px solid #5a8ab4;
         }
+        article a {
+          color: #0071bc;
+        }
         article img {
           margin-bottom: 25px;
           border-radius: 8px;
@@ -102,7 +105,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           margin-bottom: 8px;
         }
         article h3 a{
-          color: #0071bc;
           font-size: 2.1rem;
         }
         article .row p{
