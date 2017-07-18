@@ -139,6 +139,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .row .row {
           padding-right: 20px;
         }
+        #actions-sidebar {
+          padding-bottom: 0px;
+        }
         
     </style>
 </head>
@@ -209,7 +212,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <a href="#">Leer más...</a>
                     </div>
                 </aside>
-            <?php } ?>
+            <?php }?>
         </div>
 </body>
 </html>
