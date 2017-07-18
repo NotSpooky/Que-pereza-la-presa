@@ -42,7 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <style>
         #topbar {
           border-radius: 15px;
-          background-color: #cdcdcd;
+          background-color: #02011b;
           margin-bottom: 20px;
           margin-top: 20px;
           padding-top: 5px;
@@ -54,7 +54,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           font-style: italic;
         }
         #topbar a img {
-            float:left;
+          margin: "auto";
+          border-radius: 8px;
         }
         #upButton {
           display: none;
@@ -212,15 +213,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
         </nav>
     <?php } else { // Barra de navegación normal ?>
-        <div class="row" id="topbar">
-            <div class="large-12 columns">
-                
-                <h1><a href="/"><img src="/logo.png" width="100" height="100" style="margin-right: 20px;" alt="Logo" />Qué Pereza la Presa</a></h1>
-                <div class="nav-bar right">
-
-                </div>
+        <a href="/">
+            <div class="row" id="topbar">
+                <img src="/logo.png" width="55%" height="auto"  alt="Logo" />
             </div>
-        </div>
+        </a>
     <?php } ?>
         <div class="row">
             <?= $this->Flash->render() ?>
