@@ -24,11 +24,7 @@ class CreateAbout extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
-        $table->addColumn('title', 'string', [
-            'default' => null,
-            'limit' => 255,
-            'null' => false,
-        ]);
+        
         $table->addColumn('created', 'datetime', [
             'default' => null,
             'null' => false,
@@ -38,7 +34,6 @@ class CreateAbout extends AbstractMigration
             'null' => false,
         ]);
         $table->create();
-    
-        $table->create();
+
     }
 }
