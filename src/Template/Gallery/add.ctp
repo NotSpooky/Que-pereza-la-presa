@@ -14,6 +14,7 @@
     <fieldset>
         <legend><?= __('Add Gallery') ?></legend>
         <?php
+            echo $this->Form->control('title');
             echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('description');
         ?>

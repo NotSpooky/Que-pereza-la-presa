@@ -55,6 +55,10 @@ class GalleryTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
+
+        $validator
             ->requirePresence('photo', 'create')
             ->notEmpty('photo');
 

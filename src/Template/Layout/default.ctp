@@ -39,6 +39,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Botón para volver arriba -->
     <!-- Basado en https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
     <style>
+        #topbar {
+          border-radius: 15px;
+          background-color: #cdcdcd;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          text-align: center;
+        }
+        #topbar a {
+          color: #0071bc; 
+          font-style: italic;
+        }
+        #topbar a img {
+            float:left;
+        }
         #upButton {
           display: none;
           position: fixed;
@@ -57,24 +73,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #upButton:hover {
           background-color: #55F;
         }
-
-        #topbar {
-          border-radius: 15px;
-          background-color: #cdcdcd;
-          margin-bottom: 20px;
-          margin-top: 20px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          text-align: center;
-        }
-        #topbar a {
-          color: #0071bc; 
-          font-style: italic;
-        }
-        #topbar a img {
-            float:left;
-        }
-        
         aside {
           background-color:  #cdcdcd;
           padding-top: 25px;
@@ -135,9 +133,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .content h4 {
           color: #0071bc;
           border-bottom: 2px solid #7f76bf;
-        }
-        .content img {
-          width: 100%;
         }
         .row .row {
           padding-right: 20px;
