@@ -176,6 +176,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         
 
     </style>
+    <?php if ($this->request->session()->read('Auth.User')) { 
+        // Se cambia el color de la topBar cuando se está logueado.
+        echo '<style>#topbar {background-color:#3cbacf;}</style>';
+    } ?>
 </head>
 <body>
     <button onclick="topFunction()" id="upButton" title="Go to top">Volver al inicio</button>
@@ -242,6 +246,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                       </div>
                     </div>
                     <ul class="side-nav">
+                        <?php if ($this->request->session()->read('Auth.User')) {
+                            // Está logueado
+                            ?>
+                            <li><a href="/users/logout">Cerrar sesi&oacute;n</a></li>
+                        <?php } ?>
                         <li><a class="navbarlink" href="/">Página principal</a></li>
                         <li><a href="/gallery/list">Galería</a></li>
                         <li><a href="/questions/list">Preguntas frecuentes</a></li>
@@ -257,6 +266,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </div>
                 </aside>
             <?php }?>
+        </div>
+        <div class="row">
+            <hr />
+            <footer>
+                <a href="/users/login">Adminstraci&oacute;n</a>
+            </footer>
         </div>
 </body>
 </html>
