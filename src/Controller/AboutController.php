@@ -35,7 +35,8 @@ class AboutController extends AppController
      */
     public function view($id = null)
     {
-        $about = $this->About->get($id, [
+        //$about = $this->About->get($id, [
+        $about = $this->About->get(5, [
             'contain' => []
         ]);
 
@@ -73,7 +74,8 @@ class AboutController extends AppController
      */
     public function edit($id = null)
     {
-        $about = $this->About->get($id, [
+       // $about = $this->About->get($id, [
+       $about = $this->About->get(5, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -95,7 +97,7 @@ class AboutController extends AppController
      * @param string|null $id About id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
+     *//*
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -107,5 +109,5 @@ class AboutController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 }

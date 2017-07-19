@@ -196,9 +196,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           vertical-align: top;
           line-height: 120%;
           min-width: 25px;
-    max-width: 1500px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+          max-width: 2000px;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
 
     </style>
