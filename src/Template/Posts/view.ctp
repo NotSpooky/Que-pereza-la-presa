@@ -4,7 +4,7 @@
   * @var \App\Model\Entity\Post $post
   */
 ?>
-<div class="posts view large-9 medium-8 columns content">
+<div class="posts view large-9 medium-8 columns" role="content">
     <div class="main">
         <h3><?= h($post->title) ?></h3>
         <h6>Última edición: <?= $post->modified ?></h6>

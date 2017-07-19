@@ -87,16 +87,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           width:100%;
           font-weight: bold;
         }
-        
         article a {
           color: #0071bc;
         }
         article h3 {
           margin-bottom: 8px;
         }
-        article h6 {
-          margin-left: 1%;
-        }
+        
         article a h3 {
           font-size: 2.1rem;
           color: #e9e9e9;
@@ -148,6 +145,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           border-radius: 10px;
           border: 2px solid #5a8ab4;
           padding: 15px;
+        }
+        .main > p {
+          text-align: justify; padding-left: 3%;
+          padding-right: 3%;
+        }
+        .main > h3 {
+          font-size: 1.9rem;
+          margin-left: 1%;
+        }
+        .main h6 {
+          margin-left: 1%;
         }
         .main input {
           background-color: #d9e2e4;
