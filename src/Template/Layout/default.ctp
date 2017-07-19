@@ -252,11 +252,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
         </nav>
     <?php } else { // Barra de navegación normal ?>
-        <a href="/">
-            <div class="row" id="topbar">
+        <div class="row" id="topbar">
+            <a href="/">
                 <img src="/logo.png" width="55%" height="auto"  alt="Logo" />
-            </div>
-        </a>
+            </a>
+        </div>
     <?php } ?>
         <div class="row">
             <?= $this->Flash->render() ?>
