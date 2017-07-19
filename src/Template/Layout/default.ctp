@@ -79,10 +79,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           border-radius: 20px;
           border: solid #5a8ab4;
         }
-        aside button{
+        aside button {
           width:100%;
           font-weight: bold;
         }
+        
         article a {
           color: #0071bc;
         }
@@ -171,16 +172,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .row .row {
           padding-right: 20px;
         }
+        .side-nav a {
+          font-size: 120%;
+        }
         .side-nav hr {
           border-width: 1px;
           margin: 0px;
           border-color: #b4baff;
         }
-        .side-nav a {
-          font-size: 120%;
-        }
         .side-nav li {
-          padding-left: 15%;
+          font-size: 1.4rem;
+          padding-left: 8%;
+          padding-bottom: 4%;
+          padding-top: 4%;
+          color: #0071bc;
         }
         .side-nav li a:not(.button) {
           color: #0071bc; 
@@ -278,18 +283,30 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <?php if ($this->request->session()->read('Auth.User')) {
                             // Está logueado
                             ?>
-                            <li><a href="/users/logout">Cerrar sesi&oacute;n</a></li>
+                            <a href="/users/logout">
+                                <li>Cerrar sesi&oacute;n</li>
+                            </a>
                             <hr />
                         <?php } ?>
-                        <li><a class="navbarlink" href="/">Página principal</a></li>
+                        <a class="navbarlink" href="/">
+                            <li>Página principal</li>
+                        </a>
                         <hr />
-                        <li><a href="/gallery/list">Galería</a></li>
+                        <a href="/gallery/list">
+                            <li>Galería</li>
+                        </a>
                         <hr />
-                        <li><a href="/questions/list">Preguntas frecuentes</a></li>
+                        <a href="/questions/list">
+                            <li>Preguntas frecuentes</li>
+                        </a>
                         <hr />
-                        <li><a href="#">Contacto</a></li>
+                        <a href="#">
+                            <li>Contacto</li>
+                        </a>
                         <hr />
-                        <li><a href="/posts/home.rss">Suscribirse (RSS)</a></li>
+                        <a href="/posts/home.rss">
+                            <li>Suscribirse (RSS)</li>
+                        </a>
                     </ul>
                 </aside>
             <?php }?>
