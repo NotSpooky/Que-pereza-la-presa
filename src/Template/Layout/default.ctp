@@ -32,6 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('about.css') ?>
     <?= $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css') ?>
 
     <?= $this->fetch('meta') ?>
@@ -237,6 +238,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           text-overflow: ellipsis;
           overflow: hidden;
         }
+        
+        
 
     </style>
     <?php if ($this->request->session()->read('Auth.User')) { 
