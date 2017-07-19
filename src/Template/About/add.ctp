@@ -11,6 +11,7 @@
 </nav>
 <div class="about form large-9 medium-8 columns content">
     <?= $this->Form->create($about, ['type' => 'file']); ?>
+    <div>
     <fieldset>
         <legend><?= __('Add About') ?></legend>
         <?php
@@ -20,4 +21,5 @@
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
+    </div>
 </div>
