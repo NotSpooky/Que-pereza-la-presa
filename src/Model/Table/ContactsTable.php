@@ -35,7 +35,9 @@ class ContactsTable extends Table
         $this->setTable('contacts');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
-
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
         $this->addBehavior('Timestamp');
     }
 

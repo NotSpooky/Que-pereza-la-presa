@@ -35,7 +35,9 @@ class PersonsTable extends Table
         $this->setTable('persons');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
-
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
         $this->addBehavior('Timestamp');
     }
 
