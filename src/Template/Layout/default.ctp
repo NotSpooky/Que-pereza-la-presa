@@ -152,12 +152,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .main > h3 {
           font-size: 1.9rem;
           margin-left: 1%;
+          margin-bottom: 2%;
         }
         .main h6 {
           margin-left: 1%;
         }
         .main input {
-          background-color: #d9e2e4;
+          background-color: #fafafa;
           border-color: #5a8ab4;
         }
         .main fieldset legend {

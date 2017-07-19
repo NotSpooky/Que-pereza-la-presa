@@ -32,8 +32,8 @@
             <?php if (!empty($post->comments)): ?>
             <table cellpadding="0" cellspacing="0">
                 <?php foreach ($post->comments as $comment): ?>
-                <h5><span style="color:blue"><?= h($comment->username) ?></span> dijo el <?= $comment->created ?>:</h5>
-                <p><?= h($comment->text) ?></p>
+                <h5><span style="color:blue"><?= h($comment->username) ?></span> dijo el <?= $comment->created->format('d/m/Y') ?>:</h5>
+                    <p style="margin-left: 3%;"><?= h($comment->text) ?></p>
                 <?php endforeach; ?>
             </table>
             <?php endif; ?>
