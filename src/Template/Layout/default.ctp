@@ -171,7 +171,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color: inherit;
           color: #353B3C;
         }
-        <?= '.main hr { border: solid '.$borderColor.'; }' ?>
+        <?= '.main hr { border: solid 1px '.$borderColor.'; }' ?>
         .main img {
           margin-bottom: 25px;
           margin-right: 20px;
