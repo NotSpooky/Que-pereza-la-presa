@@ -12,7 +12,9 @@
             <div class="row">
                 <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
                 <div class="large-6 columns">
-                    <img width="480" height="240" src='<?= '/files/Posts/photo/'.$post ['photo'] ?>'></img>
+                    <a href=<?= $path ?>>
+                        <img width="480" height="240" src='<?= '/files/Posts/photo/'.$post ['photo'] ?>'></img>
+                    </a>
                 </div>
                 <?php } ?>
                 <div class="large-6 columns">
