@@ -89,7 +89,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         article h3 {
           margin-bottom: 8px;
         }
-        article h3 a{
+        article a h3 {
           font-size: 2.1rem;
           color: #e9e9e9;
         }

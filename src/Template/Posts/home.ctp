@@ -3,9 +3,11 @@
         $path = "'/posts/view/".$post->id."'"
     ?>
         <article class="main">
-            <div class="post-title">
-                <h3><a href=<?= $path ?>><?= $post -> title ?></a></h3>
-            </div>
+            <a href=<?= $path ?>>
+                <div class="post-title">
+                    <h3><?= $post -> title ?></h3>
+                </div>
+            </a>
             <h6>Creado por <?= $post ['author'] ?></h6>
             <div class="row">
                 <?php if (isset ($post ['photo']) && $post ['photo'] != '') { ?>
