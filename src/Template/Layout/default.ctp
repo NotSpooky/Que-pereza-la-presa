@@ -40,6 +40,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Botón para volver arriba -->
     <!-- Basado en https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
     <style>
+        #actions-sidebar {
+          padding-bottom: 0px;
+        }
         #topbar {
           border-radius: 15px;
           background-color: #02011b;
@@ -49,11 +52,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           padding-bottom: 5px;
           text-align: center;
         }
-        #topbar a {
-          color: #0071bc; 
-          font-style: italic;
-        }
-        #topbar a img {
+        #topbar img {
           margin: "auto";
           border-radius: 8px;
         }
@@ -110,6 +109,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         hr {
           border-width: 3px;
         }
+        .color-fb {
+          color: #3b5998;
+        }
+        .color-twitter {
+          color: #00aced;
+        }
         .content form div {
           padding: 0px;
         }
@@ -119,6 +124,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .content h4 {
           color: #0071bc;
           border-bottom: 2px solid #7f76bf;
+        }
+        .glyph {
+          border-bottom: 1px dotted #ccc;
+          padding: 10px 0 20px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        .large-9 {
+          padding-bottom: 0px;
         }
         .main {
           background-color: #8cb1c5;
@@ -141,39 +155,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           border: 3px solid #5a8ab4;
           float: left;
         }
-        .side-nav li a:not(.button) {
-          color: #0071bc; 
+        .preview-glyphs {
+          vertical-align: bottom;
+        } 
+        .preview-scale { 
+          color: #888;
+          font-size: 12px; 
+          margin-top: 5px;
         }
         .row .row {
           padding-right: 20px;
         }
-        #actions-sidebar {
-          padding-bottom: 0px;
+        .side-nav li a:not(.button) {
+          color: #0071bc; 
         }
-        .glyph {
-        border-bottom: 1px dotted #ccc;
-        padding: 10px 0 20px;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .preview-glyphs { vertical-align: bottom; } 
-
-      .preview-scale { 
-        color: #888;
-        font-size: 12px; 
-        margin-top: 5px;
-      }
-
-      .step {
-        display: inline-block;
-        line-height: 1;
-        width: 10%;
-      }
-      .size-48 { font-size: 48px; }
-      .color-fb { color: #3b5998; }
-      .color-twitter { color: #00aced; }
-        
+        .size-48 {
+          font-size: 48px;
+        }
+        .step {
+          display: inline-block;
+          line-height: 1;
+          width: 10%;
+        }
 
     </style>
     <?php if ($this->request->session()->read('Auth.User')) { 
@@ -206,13 +209,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <nav class="top-bar expanded" data-topbar role="navigation">
             <ul class="title-area large-3 medium-4 columns">
                 <li class="name">
-                    <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                    <h1><a href=""><?= __($this->fetch('title')) ?></a></h1>
                 </li>
             </ul>
             <div class="top-bar-section">
-                <ul class="right">
-                    <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                    <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
+                <ul class="right" style="margin-right: 10%;">
+                    <h3 style="color: white;">Qu&eacute; pereza la presa</h3>
                 </ul>
             </div>
         </nav>
@@ -270,8 +272,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="row">
             <hr />
             <footer>
-                <a href="/users/login">Adminstraci&oacute;n</a>
+                <span style="float:left;">2017-<?= date("Y") ?></span><span style="float:right;"><a href="/users/login">Adminstraci&oacute;n</a></span>
             </footer>
         </div>
 </body>
 </html>
+

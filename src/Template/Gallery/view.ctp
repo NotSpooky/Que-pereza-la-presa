@@ -6,6 +6,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <?= $adminNavbarCommonElements ?>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Gallery'), ['action' => 'edit', $gallery->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Gallery'), ['action' => 'delete', $gallery->id], ['confirm' => __('Are you sure you want to delete # {0}?', $gallery->id)]) ?> </li>
@@ -19,6 +20,7 @@
         <tr>
             <th scope="row"><?= __('Photo') ?></th>
             <td><?= h($gallery->photo) ?></td>
+            <img src="/files/Gallery/photo/<?= h($gallery->photo) ?>" alt="foto" />
         </tr>
         <tr>
             <th scope="row"><?= __('Description') ?></th>
