@@ -127,9 +127,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         .glyph {
           border-bottom: 1px dotted #ccc;
-          padding: 10px 0 20px;
-          margin-bottom: 20px;
+          padding: 0px;
           text-align: center;
+          font-size: 400%;
         }
         .large-9 {
           padding-bottom: 0px;
@@ -166,16 +166,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .row .row {
           padding-right: 20px;
         }
+        .side-nav hr {
+          border-width: 1px;
+          margin: 0px;
+          border-color: #b4baff;
+        }
+        .side-nav a {
+          font-size: 120%;
+        }
+        .side-nav li {
+          padding-left: 15%;
+        }
         .side-nav li a:not(.button) {
           color: #0071bc; 
-        }
-        .size-48 {
-          font-size: 48px;
         }
         .step {
           display: inline-block;
           line-height: 1;
-          width: 10%;
+          margin-left: 5%;
+          margin-right: 5%;
         }
 
     </style>
@@ -236,36 +245,33 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <div class="glyph">
                       <div class="preview-glyphs">
                         <div>
-                          <a href="https://www.facebook.com/queperezalapresa/">
-                            <i class="step fi-social-facebook size-48 color-fb" ></i>
-                          </a>
+                            <a href="https://www.facebook.com/queperezalapresa/">
+                                <i class="step fi-social-facebook color-fb" ></i>
+                            </a>
+                            <a href="https://twitter.com/qperezalapresa">
+                                <i class="step fi-social-twitter color-twitter" ></i>
+                            </a>
                         </div>
-                        <div>
-                        <a href="https://twitter.com/qperezalapresa">
-                        <i class="step fi-social-twitter size-48 color-twitter" ></i>
-                         </a>
-                        <div>
                       </div>
                     </div>
                     <ul class="side-nav">
+                        <hr />
                         <?php if ($this->request->session()->read('Auth.User')) {
                             // Está logueado
                             ?>
                             <li><a href="/users/logout">Cerrar sesi&oacute;n</a></li>
+                            <hr />
                         <?php } ?>
                         <li><a class="navbarlink" href="/">Página principal</a></li>
+                        <hr />
                         <li><a href="/gallery/list">Galería</a></li>
+                        <hr />
                         <li><a href="/questions/list">Preguntas frecuentes</a></li>
+                        <hr />
                         <li><a href="#">Contacto</a></li>
-                        <li><a href="/posts/home.rss"</a>Suscribirse</li>
+                        <hr />
+                        <li><a href="/posts/home.rss">Suscribirse (RSS)</a></li>
                     </ul>
-                    <div class="panel">
-                        <h5>Lorem ipsum</h5>
-                        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. 
-            Swine short ribs meatball irure bacon nulla pork belly cupidatat 
-            meatloaf cow.</p>
-                        <a href="#">Leer más...</a>
-                    </div>
                 </aside>
             <?php }?>
         </div>
