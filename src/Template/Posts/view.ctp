@@ -7,7 +7,7 @@
 <div class="posts view large-9 medium-8 columns" role="content">
     <div class="main">
         <h3><?= h($post->title) ?></h3>
-        <h6>Última edición: <?= $post->modified ?></h6>
+        <h6>Última edición: <?= $post->modified->format('d/m/Y') ?></h6>
         <?php if (isset ($post->photo) && $post->photo != '') {
             echo '<img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post -> photo.'" />';
         } ?>

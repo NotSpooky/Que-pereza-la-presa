@@ -42,6 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <style>
         <?php 
             $bgColor = '#ccd7e6';
+            $borderColor = '#669ac8';
         ?>
         #actions-sidebar {
           padding-bottom: 0px;
@@ -57,8 +58,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #topbar img {
           margin: "auto";
           border-radius: 8px;
-          border: 4px solid #8cb1c5;
         }
+        <?= '#topbar img { border: 4px solid '.$borderColor.'; }' ?>
         #upButton {
           display: none;
           position: fixed;
@@ -77,12 +78,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #upButton:hover {
           background-color: #55F;
         }
-        <?= 'aside { background-color: '.$bgColor.'; }' ?>
         aside {
           padding-top: 25px;
           border-radius: 20px;
-          border: solid #669ac8;
         }
+        <?= 
+        'aside { 
+          background-color: '.$bgColor.'; 
+          border: solid '.$borderColor.';
+        }' ?>
         aside button {
           width:100%;
           font-weight: bold;
@@ -128,10 +132,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         .content h4 {
           color: #0071bc;
-          border-bottom: 2px solid #7f76bf;
         }
+        <?= '.content h4 { border-bottom: 2px solid '.$borderColor.'; }' ?>
         .glyph {
-          border-bottom: 1px dotted #ccc;
           padding: 0px;
           text-align: center;
           font-size: 400%;
@@ -139,12 +142,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .large-9 {
           padding-bottom: 0px;
         }
-        <?= '.main { background-color: '.$bgColor.'; }' ?>
         .main {
           border-radius: 10px;
-          border: 2px solid #5a8ab4;
           padding: 15px;
         }
+        <?= '
+        .main { 
+          background-color: '.$bgColor.';
+          border: 2px solid '.$borderColor.';
+        }' ?>
         .main > p {
           text-align: justify; padding-left: 3%;
           padding-right: 3%;
@@ -165,13 +171,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color: inherit;
           color: #353B3C;
         }
+        <?= '.main hr { border: solid '.$borderColor.'; }' ?>
         .main img {
           margin-bottom: 25px;
           margin-right: 20px;
           border-radius: 8px;
-          border: 3px solid #5a8ab4;
           float: left;
         }
+        <?= '.main img { border: 3px solid '.$borderColor.'; }' ?>
         .post-title {
           background-color: #0071bc;
           text-align: center;
@@ -206,6 +213,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         .side-nav-user li a:not(.button) {
           color: #0071bc; 
+        }
+        .side-nav-user {
+          margin: 0px;
+          margin-bottom: 5%;
         }
         .step {
           display: inline-block;
