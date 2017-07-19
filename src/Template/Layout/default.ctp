@@ -40,6 +40,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Botón para volver arriba -->
     <!-- Basado en https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
     <style>
+        <?php 
+            $bgColor = '#ccd7e6';
+        ?>
         #actions-sidebar {
           padding-bottom: 0px;
         }
@@ -74,11 +77,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #upButton:hover {
           background-color: #55F;
         }
+        <?= 'aside { background-color: '.$bgColor.'; }' ?>
         aside {
-          background-color:  #cdcdcd;
           padding-top: 25px;
           border-radius: 20px;
-          border: solid #5a8ab4;
+          border: solid #669ac8;
         }
         aside button {
           width:100%;
@@ -140,8 +143,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .large-9 {
           padding-bottom: 0px;
         }
+        <?= '.main { background-color: '.$bgColor.'; }' ?>
         .main {
-          background-color: #8cb1c5;
           border-radius: 10px;
           border: 2px solid #5a8ab4;
           padding: 15px;
