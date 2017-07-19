@@ -35,7 +35,9 @@ class AboutTable extends Table
         $this->setTable('about');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
-
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
         $this->addBehavior('Timestamp');
     }
 
