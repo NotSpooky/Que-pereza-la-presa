@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           background-color:  #cdcdcd;
           padding-top: 25px;
           border-radius: 20px;
-          border: solid aliceblue;
+          border: solid #5a8ab4;
         }
         aside button{
           width:100%;
@@ -91,6 +91,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         article h3 a{
           font-size: 2.1rem;
+          color: #e9e9e9;
         }
         article .row p{
           font-size: 1.4rem;
@@ -153,6 +154,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           border-radius: 8px;
           border: 3px solid #5a8ab4;
           float: left;
+        }
+        .post-title {
+          background-color: #0071bc;
+          text-align: center;
+          border-radius: 10px;
         }
         .preview-glyphs {
           vertical-align: bottom;
