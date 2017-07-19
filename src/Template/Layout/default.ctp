@@ -186,6 +186,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           margin-left: 5%;
           margin-right: 5%;
         }
+        
+        .about {
+          min-width: 3em;
+          padding: .1em;
+          word-break: break-all;
+          hyphens: auto;
+          text-align: left;
+          vertical-align: top;
+          line-height: 120%;
+          min-width: 25px;
+    max-width: 1500px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+        }
 
     </style>
     <?php if ($this->request->session()->read('Auth.User')) { 
