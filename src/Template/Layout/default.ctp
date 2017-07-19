@@ -44,8 +44,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           padding-bottom: 0px;
         }
         #topbar {
-          border-radius: 15px;
-          background-color: #02011b;
           margin-bottom: 20px;
           margin-top: 20px;
           padding-top: 5px;
@@ -55,6 +53,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         #topbar img {
           margin: "auto";
           border-radius: 8px;
+          border: 4px solid #8cb1c5;
         }
         #upButton {
           display: none;
