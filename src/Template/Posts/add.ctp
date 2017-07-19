@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+    
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -18,11 +19,11 @@
         <legend><?= __('Add Post') ?></legend>
         <?php
             echo $this->Form->control('title');
+            echo $this->Form->control('author', ['value' => $username]);
             //echo $this->Form->control('photo');
             echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('summary');
             echo $this->Form->control('text');
-            echo $this->Form->control('author');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
