@@ -93,7 +93,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         article h3 {
           margin-bottom: 8px;
         }
-        
         article a h3 {
           font-size: 2.1rem;
           color: #e9e9e9;
@@ -213,7 +212,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           margin-left: 5%;
           margin-right: 5%;
         }
-        
         .about {
           min-width: 3em;
           padding: 0.1em;
@@ -328,12 +326,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 </aside>
             <?php }?>
         </div>
-        <div class="row">
-            <hr />
-            <footer>
-                <span style="float:left;">2017-<?= date("Y") ?></span><span style="float:right;"><a href="/users/login">Adminstraci&oacute;n</a></span>
-            </footer>
-        </div>
+
+        <?php if (!isset($isAdmin) || !$isAdmin) { ?>
+            <div class="row">
+                <hr />
+                <footer>
+                    <span style="float:left; margin-left:0.5%;">2017-<?= date("Y") ?></span><span style="float:right;margin-right:0.5%;"><a href="/users/login">Adminstraci&oacute;n</a></span>
+                </footer>
+            </div>
+        <?php } ?>
 </body>
 </html>
 
