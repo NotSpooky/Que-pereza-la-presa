@@ -100,6 +100,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         article .row p{
           font-size: 1.4rem;
+          text-align: justify;
         }
         <?php if (!isset($isAdmin) || !$isAdmin) { ?>
         body {
@@ -176,22 +177,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         .row .row {
           padding-right: 20px;
         }
-        .side-nav a {
+        .side-nav-user a {
           font-size: 120%;
         }
-        .side-nav hr {
+        .side-nav-user hr {
           border-width: 1px;
           margin: 0px;
           border-color: #b4baff;
         }
-        .side-nav li {
+        .side-nav-user li {
           font-size: 1.4rem;
           padding-left: 8%;
-          padding-bottom: 4%;
-          padding-top: 4%;
+          padding-bottom: 3%;
+          padding-top: 3%;
           color: #0071bc;
+          list-style-type: none;
         }
-        .side-nav li a:not(.button) {
+        .side-nav-user li a:not(.button) {
           color: #0071bc; 
         }
         .step {
@@ -282,7 +284,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         </div>
                       </div>
                     </div>
-                    <ul class="side-nav">
+                    <ul class="side-nav-user">
                         <hr />
                         <?php if ($this->request->session()->read('Auth.User')) {
                             // Está logueado
