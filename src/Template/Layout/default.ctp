@@ -49,6 +49,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           padding-top: 5px;
           padding-bottom: 5px;
           text-align: center;
+          border-radius: 15px;
         }
         #topbar img {
           margin: "auto";
@@ -89,6 +90,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         article h3 {
           margin-bottom: 8px;
+        }
+        article h6 {
+          margin-left: 1%;
         }
         article a h3 {
           font-size: 2.1rem;
@@ -199,7 +203,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         
         .about {
           min-width: 3em;
-          padding: .1em;
+          padding: 0.1em;
           word-break: break-all;
           hyphens: auto;
           text-align: left;
@@ -214,7 +218,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </style>
     <?php if ($this->request->session()->read('Auth.User')) { 
         // Se cambia el color de la topBar cuando se está logueado.
-        echo '<style>#topbar {background-color:#3cbacf;}</style>';
+        echo '<style>#topbar {background-color: #b1dde4;}</style>';
     } ?>
 </head>
 <body>
