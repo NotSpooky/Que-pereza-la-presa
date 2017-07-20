@@ -355,14 +355,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <span style="float:left; margin-left:0.5%;">2017-<?= date("Y") ?></span><span style="float:right;margin-right:0.5%;"><a href="/posts">Adminstraci&oacute;n</a></span>
                 </footer>
             </div>
-        <?php } else {?>
-        <div class="row">
-                <hr />
-                <footer>
-                    <span style="float:left; margin-left:0.5%;">2017-<?= date("Y") ?></span><span style="float:right;margin-right:0.5%;"><a href="/posts">Cerrar Sesi&oacute;n</a></span>
-                </footer>
-            </div>
-        <?php } ?>
+        <?php } else ?>
+        
 </body>
 </html>
 

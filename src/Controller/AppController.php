@@ -77,6 +77,7 @@ class AppController extends Controller
             $this->set('username', $this->Auth->user('username'));
         }
         $this->set('adminNavbarCommonElements', '
+            <li class=heading><a href="/users/logout">Cerrar Sesión</a></li>
             <li class=heading><a href="/about/Edit">'.__("About").'</a></li>
             <li class=heading><a href="/persons/index">Personas</a></li>
             <li class=heading><a href="/contacts/index">Contacto</a></li>
