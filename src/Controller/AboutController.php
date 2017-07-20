@@ -40,7 +40,7 @@ class AboutController extends AppController
      */
     public function view($id = null)
     {
-        $this->set(['title' => 'Acerca de nosotros', 'isAdmin' => false]);
+        $this->set(['title' => 'Acerca de nosotros']);
         $about = $this->About->get(1, [
             'contain' => ['Persons']
         ]);
