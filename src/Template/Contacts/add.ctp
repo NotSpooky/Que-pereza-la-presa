@@ -9,7 +9,7 @@
   */
 ?>
 
-<div class="contacts form large-9 medium-8 columns content" role="content">
+<div class="large-9 columns" role="content">
     <div class="main">
         <h2>Contacto</h2>
         <h4>¿Tienes alguna pregunta?</h4>

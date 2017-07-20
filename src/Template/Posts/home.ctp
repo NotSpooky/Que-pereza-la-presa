@@ -1,7 +1,6 @@
 <div class="large-9 columns" role="content">
     <?php foreach ($posts as $post) { 
-        $path = "'/posts/view/".$post->id."'"
-    ?>
+        $path = "'/posts/view/".$post->id."'"; ?>
         <article class="main">
             <a href=<?= $path ?>>
                 <div class="post-title">
