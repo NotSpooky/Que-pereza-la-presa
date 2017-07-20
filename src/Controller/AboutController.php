@@ -49,8 +49,7 @@ class AboutController extends AppController
         $this->set('about', $about);
         $this->set(compact('person', 'about'));
         $this->set('_serialize', ['about']);
-        $this->set(['title' => "About us"]);
-        $this->set('isAdmin', true);
+        $this->set(['title' => "Acerca de nosotros"]);
         /*$about = $this->About->get($id, [
             'contain' => ['Persons']
         ]);
