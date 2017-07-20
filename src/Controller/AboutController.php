@@ -91,7 +91,7 @@ class AboutController extends AppController
     public function edit($id = null)
     {
         $this->set(['title' => 'Editando acerca de nosotros', 'isAdmin' => true]);
-        $about = $this->About->get($id, [
+        $about = $this->About->get(1, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
