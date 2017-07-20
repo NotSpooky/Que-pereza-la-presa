@@ -6,12 +6,13 @@
 ?>
 <div class="large-9 columns" role="content">
     <div class="main">
-        <h2>Acerca de nosotros.</h2>
+        <h2>Acerca de nosotros</h2>
         <div class="row" style="text-align:center;">
             <?php if (isset ($about->photo) && $about->photo != '') {
                 echo '<img src="'.DS.'files'.DS.'About'.DS.'photo'.DS.$about -> photo.'" class="about_image" style="display: inline-block; float:none;" />';
             } ?>
         </div>
+        <hr />
         <p><?= str_replace("\n", "<br />", $about->text) ?></p>
         <br />
         <h4><?= __('Persons') ?></h4>
