@@ -332,8 +332,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             <li>Preguntas frecuentes</li>
                         </a>
                         <hr />
-                        <a href="#">
+                        <a href="/contacts/add">
                             <li>Contacto</li>
+                        </a>
+                        <hr />
+                        <a href="/about/view/1">
+                            <li>Acerca de nosotros</li>
                         </a>
                         <hr />
                         <a href="/posts/home.rss">
