@@ -73,7 +73,9 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
-        $this->set('username', $this->Auth->user('username'));
+        if (isset ($this->Auth)) {
+            $this->set('username', $this->Auth->user('username'));
+        }
         $this->set('adminNavbarCommonElements', '
             <li class=heading><a href="/about/view/1">'.__("About").'</a></li>
             <li class=heading><a href="/contacts/index">'.__("About").'</a></li>
