@@ -22,10 +22,9 @@
             echo $this->Form->control('email', ['label' => 'Correo electrónico:']);
             echo $this->Form->control('subject', ['label' => 'Asunto:']);
             echo $this->Form->control('message', ['label' => 'Mensaje:']);
-            
+            echo $this->Form->button('Enviar mensaje');
         ?>
     </fieldset>
-    <?= $this->Form->button('Enviar mensaje') ?>
     <?= $this->Form->end() ?>
     </div>
 </div>
