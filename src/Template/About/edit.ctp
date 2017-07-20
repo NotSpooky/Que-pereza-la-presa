@@ -3,6 +3,11 @@
   * @var \App\View\AppView $this
   */
 ?>
+<script>
+function addImage () {
+    document.getElementById ("image").innerHTML = '<?= $this->Form->input('photo', ['type' => 'file']) ?>';
+}
+</script>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <?= $adminNavbarCommonElements ?>
@@ -18,10 +23,13 @@
         <legend><?= __('Edit About') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->input('photo', ['type' => 'file']);
+            echo '<div id="image">
+                <img src="'.DS.'files'.DS.'About'.DS.'photo'.DS.$about ['photo'].'" width="200" height="200" />
+                <button type="button" onclick="addImage()">Editar imagen</button>
+                </div>';
             echo $this->Form->control('text');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Agregar')) ?>
+    <?= $this->Form->button('Editar') ?>
     <?= $this->Form->end() ?>
 </div>

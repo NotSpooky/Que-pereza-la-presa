@@ -22,7 +22,7 @@
                 <?php $contador=0; ?>
                 <div class="container"> 
                 <!--table cellpadding="0" cellspacing="0"-->
-                    <?php foreach ($about->persons as $person){ ?>
+                    <?php foreach ($about->persons as $person) { ?>
                         <div class="person_gallery">
                             <div class="person"> 
                                 <?php if (isset ($person->photo) && $person->photo != '') {
@@ -34,6 +34,7 @@
                             </div>
                         </div>
                     <?php } ?>
+                    </div>
                 <!--/table-->
             <?php } ?>
         </div>
