@@ -8,6 +8,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Question'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Ve preguntas frecuentes'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="questions index large-9 medium-8 columns content">
