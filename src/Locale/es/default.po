@@ -51,12 +51,12 @@ msgstr "Usuarios"
 #: Controller/CommentsController.php:63;89
 #: Controller/PostsController.php:63
 msgid "The comment has been saved."
-msgstr "El comentario ha sido guardado."
+msgstr "El comentario ha sido agregado."
 
 #: Controller/CommentsController.php:67;93
 #: Controller/PostsController.php:66
 msgid "The comment could not be saved. Please, try again."
-msgstr "No se pudo guardar el comentario, favor intentar nuevamente."
+msgstr "No se pudo agregar el comentario, favor intentar nuevamente."
 
 #: Controller/CommentsController.php:113
 msgid "The comment has been deleted."

@@ -43,6 +43,7 @@ class PostsTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->hasMany('Comments', [
+            'dependent' => true,
             'foreignKey' => 'post_id'
         ]);
     }
