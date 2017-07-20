@@ -24,9 +24,15 @@ class PostsController extends AppController
     public function home()
     {
 		$this->set('title', 'Qué pereza la presa');
-        $posts = $this->paginate($this->Posts, ['order' => ['created' => 'desc'], 'limit' => 10]);
-
-        $this->set('content', 'Sleep');
+        $searchTerm = $this->request->params['?']['search'] ?? null;
+        $posts = null;
+        if ($searchTerm) {
+            // TO DO: Revisar que no sea vulnerable a inyección SQL.
+            $query = $this->Posts->find('all')->where(['title LIKE' => '%'.$searchTerm.'%'])->orWhere (['text LIKE' => '%'.$searchTerm.'%']);
+            $posts = $this->paginate ($query, ['order' => ['created' => 'desc'], 'limit' => 10]);
+        } else {
+            $posts = $this->paginate($this->Posts, ['order' => ['created' => 'desc'], 'limit' => 10]);
+        }
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);
     }
