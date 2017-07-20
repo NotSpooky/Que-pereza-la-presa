@@ -20,7 +20,7 @@ function addImage () {
 <div class="about form large-9 medium-8 columns content">
     <?= $this->Form->create($about, ['type' => 'file']); ?>
     <fieldset>
-        <legend><?= __('Edit About') ?></legend>
+        <legend>Editando "Acerca de nosotros"</legend>
         <?php
             echo $this->Form->control('title');
             echo '<div id="image">
