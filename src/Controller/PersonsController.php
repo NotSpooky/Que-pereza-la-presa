@@ -20,6 +20,7 @@ class PersonsController extends AppController
      */
     public function index()
     {
+        $this->set(['title' => 'Personas', 'isAdmin' => true]);
         $persons = $this->paginate($this->Persons);
 
         $this->set(compact('persons'));
@@ -35,6 +36,7 @@ class PersonsController extends AppController
      */
     public function view($id = null)
     {
+        $this->set(['title' => 'Consultando persona', 'isAdmin' => true]);
         $person = $this->Persons->get($id, [
             'contain' => []
         ]);
@@ -50,6 +52,7 @@ class PersonsController extends AppController
      */
     public function add()
     {
+        $this->set(['title' => 'Agregando persona', 'isAdmin' => true]);
         $person = $this->Persons->newEntity();
         $errorUploading = false;
         if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
@@ -79,6 +82,7 @@ class PersonsController extends AppController
      */
     public function edit($id = null)
     {
+        $this->set(['title' => 'Editando persona', 'isAdmin' => true]);
         $person = $this->Persons->get($id, [
             'contain' => []
         ]);
@@ -112,6 +116,7 @@ class PersonsController extends AppController
      */
     public function delete($id = null)
     {
+        $this->set(['title' => 'Eliminando persona', 'isAdmin' => true]);
         $this->request->allowMethod(['post', 'delete']);
         $person = $this->Persons->get($id);
         if ($this->Persons->delete($person)) {

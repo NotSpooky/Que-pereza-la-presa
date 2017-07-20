@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Event\Event;
 /**
  * About Controller
  *
@@ -13,6 +13,10 @@ use App\Controller\AppController;
 class AboutController extends AppController
 {
 
+    public function beforeFilter (Event $event) {
+        parent::beforeFilter ($event);
+        $this->Auth->allow (['view']);
+    }
     /**
      * Index method
      *
@@ -20,6 +24,7 @@ class AboutController extends AppController
      */
     public function index()
     {
+        $this->set(['title' => 'Acerca de nosotros', 'isAdmin' => true]);
         $about = $this->paginate($this->About);
 
         $this->set(compact('about'));
@@ -35,6 +40,7 @@ class AboutController extends AppController
      */
     public function view($id = null)
     {
+        $this->set(['title' => 'Acerca de nosotros', 'isAdmin' => false]);
         $about = $this->About->get(1, [
             'contain' => ['Persons']
         ]);
@@ -60,6 +66,7 @@ class AboutController extends AppController
      */
     public function add()
     {
+        $this->set(['title' => 'Agregando en acerca de nosotros', 'isAdmin' => true]);
         $about = $this->About->newEntity();
         if ($this->request->is('post')) {
             $about = $this->About->patchEntity($about, $this->request->getData());
@@ -83,6 +90,7 @@ class AboutController extends AppController
      */
     public function edit($id = null)
     {
+        $this->set(['title' => 'Editando acerca de nosotros', 'isAdmin' => true]);
         $about = $this->About->get($id, [
             'contain' => []
         ]);
@@ -108,6 +116,7 @@ class AboutController extends AppController
      */
     public function delete($id = null)
     {
+        $this->set(['title' => 'Elinimar acerca de nosotros', 'isAdmin' => true]);
         $this->request->allowMethod(['post', 'delete']);
         $about = $this->About->get($id);
         if ($this->About->delete($about)) {

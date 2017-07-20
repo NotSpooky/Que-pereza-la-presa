@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Event\Event;
 /**
  * Contacts Controller
  *
@@ -12,6 +12,10 @@ use App\Controller\AppController;
  */
 class ContactsController extends AppController
 {
+    public function beforeFilter (Event $event) {
+        parent::beforeFilter ($event);
+        $this->Auth->allow (['add']);
+    }
 
     /**
      * Index method
@@ -20,6 +24,7 @@ class ContactsController extends AppController
      */
     public function index()
     {
+        $this->set(['title' => 'Mensajes enviados', 'isAdmin' => true]);
         $contacts = $this->paginate($this->Contacts);
 
         $this->set(compact('contacts'));
@@ -35,6 +40,7 @@ class ContactsController extends AppController
      */
     public function view($id = null)
     {
+        $this->set(['title' => 'Mensajes enviados', 'isAdmin' => true]);
         $contact = $this->Contacts->get($id, [
             'contain' => []
         ]);
@@ -50,6 +56,7 @@ class ContactsController extends AppController
      */
     public function add()
     {
+        $this->set(['title' => 'Contacto', 'isAdmin' => false]);
         $contact = $this->Contacts->newEntity();
         $errorUploading = false;
         if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
@@ -78,6 +85,7 @@ class ContactsController extends AppController
      *//*
     public function edit($id = null)
     {
+    $this->set(['title' => 'Editando mensajes enviados', 'isAdmin' => true]);
         $contact = $this->Contacts->get($id, [
             'contain' => []
         ]);
@@ -103,6 +111,7 @@ class ContactsController extends AppController
      */
     public function delete($id = null)
     {
+        $this->set(['title' => 'Mensajes enviados', 'isAdmin' => true]);
         $this->request->allowMethod(['post', 'delete']);
         $contact = $this->Contacts->get($id);
         if ($this->Contacts->delete($contact)) {

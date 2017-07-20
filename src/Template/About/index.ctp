@@ -12,6 +12,7 @@
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'Persons', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+
 <div class="about index large-9 medium-8 columns content">
     <h3><?= __('About') ?></h3>
     <table cellpadding="0" cellspacing="0">

@@ -5,16 +5,11 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <?= $adminNavbarCommonElements ?>
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $about->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $about->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('About'), ['action' => 'view']) ?></li>
-        <li><?= $this->Html->link(__('List Persons'), ['controller' => 'Persons', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Person'), ['controller' => 'Persons', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Volver a Acerca de nosotros'), ['action' => 'view', $about->id]) ?> </li>
+        <li><?= $this->Html->link(__('Lista de  Personas'), ['controller' => 'Persons', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Nueva persona Person'), ['controller' => 'Persons', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="about form large-9 medium-8 columns content">
