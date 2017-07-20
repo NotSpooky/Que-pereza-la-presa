@@ -4,7 +4,13 @@
   * @var \App\Model\Entity\Person[]|\Cake\Collection\CollectionInterface $persons
   */
 ?>
-
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <?= $adminNavbarCommonElements ?>
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link('Agregar persona', ['action' => 'add']) ?></li>
+    </ul>
+</nav>
 <div class="persons index large-9 medium-8 columns content">
     <h3><?= __('Persons') ?></h3>
     <table cellpadding="0" cellspacing="0">
@@ -23,11 +29,12 @@
             <tr>
                 <td><?= $this->Number->format($person->id) ?></td>
                 <td><?= h($person->name) ?></td>
-                <td><?= h($person->description) ?></td>
                 <!--td>< ?= h($person->photo) ?></td-->
                 <td class="large-6 columns">
                     <img width="480" height="240" src='<?= '/files/Persons/photo/'.$person ['photo'] ?>'></img>
                 </td>
+
+                <td><?= h($person->description) ?></td>
                 <td><?= h($person->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $person->id]) ?>
@@ -53,5 +60,4 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
-    <li><?= $this->Html->link(__('New Person'), ['action' => 'add']) ?></li>
 </div>
