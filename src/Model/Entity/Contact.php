@@ -7,9 +7,12 @@ use Cake\ORM\Entity;
  * Contact Entity
  *
  * @property int $id
- * @property string $title
+ * @property string $subject
  * @property string $photo
- * @property string $text
+ * @property string $message
+ * @property string $name
+ * @property string $email
+ * @property string $number
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  */

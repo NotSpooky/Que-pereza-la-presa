@@ -20,7 +20,7 @@
     <fieldset>
         <legend><?= __('Edit Contact') ?></legend>
         <?php
-            echo $this->Form->control('title');
+            echo $this->Form->control('subject');
             echo $this->Form->control('photo');
             echo $this->Form->control('message');
             echo $this->Form->control('name');

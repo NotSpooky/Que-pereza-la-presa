@@ -16,7 +16,9 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('subject') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('number') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -28,7 +30,9 @@
             <?php foreach ($contacts as $contact): ?>
             <tr>
                 <td><?= $this->Number->format($contact->id) ?></td>
+                <td><?= h($contact->subject) ?></td>
                 <td><?= h($contact->photo) ?></td>
+                <td><?= h($contact->name) ?></td>
                 <td><?= h($contact->email) ?></td>
                 <td><?= h($contact->number) ?></td>
                 <td><?= h($contact->created) ?></td>

@@ -52,8 +52,8 @@ class ContactsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->requirePresence('subject', 'create')
+            ->notEmpty('subject');
 
         $validator
             ->requirePresence('photo', 'create')

@@ -7,10 +7,13 @@ use Cake\ORM\Entity;
  * About Entity
  *
  * @property int $id
+ * @property string $title
  * @property string $photo
  * @property string $text
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
+ *
+ * @property \App\Model\Entity\Person[] $persons
  */
 class About extends Entity
 {

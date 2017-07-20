@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New About'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Persons'), ['controller' => 'Persons', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Person'), ['controller' => 'Persons', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="about index large-9 medium-8 columns content">
@@ -16,6 +18,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
@@ -26,6 +29,7 @@
             <?php foreach ($about as $about): ?>
             <tr>
                 <td><?= $this->Number->format($about->id) ?></td>
+                <td><?= h($about->title) ?></td>
                 <td><?= h($about->photo) ?></td>
                 <td><?= h($about->created) ?></td>
                 <td><?= h($about->modified) ?></td>

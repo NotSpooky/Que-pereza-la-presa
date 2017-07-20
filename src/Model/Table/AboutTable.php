@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * About Model
  *
+ * @property \App\Model\Table\PersonsTable|\Cake\ORM\Association\HasMany $Persons
+ *
  * @method \App\Model\Entity\About get($primaryKey, $options = [])
  * @method \App\Model\Entity\About newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\About[] newEntities(array $data, array $options = [])
@@ -35,13 +37,12 @@ class AboutTable extends Table
         $this->setTable('about');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
-        $this->addBehavior('Josegonzalez/Upload.Upload', [
-            'photo' => []
-        ]);
+
+        $this->addBehavior('Timestamp');
+
         $this->hasMany('Persons', [
             'foreignKey' => 'about_id'
         ]);
-        $this->addBehavior('Timestamp');
     }
 
     /**
@@ -55,6 +56,10 @@ class AboutTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
+
+        $validator
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
 
         $validator
             ->requirePresence('photo', 'create')

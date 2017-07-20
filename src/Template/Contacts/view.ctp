@@ -17,8 +17,16 @@
     <h3><?= h($contact->title) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Subject') ?></th>
+            <td><?= h($contact->subject) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Photo') ?></th>
             <td><?= h($contact->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Name') ?></th>
+            <td><?= h($contact->name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Email') ?></th>
@@ -42,15 +50,7 @@
         </tr>
     </table>
     <div class="row">
-        <h4><?= __('Title') ?></h4>
-        <?= $this->Text->autoParagraph(h($contact->title)); ?>
-    </div>
-    <div class="row">
         <h4><?= __('Message') ?></h4>
         <?= $this->Text->autoParagraph(h($contact->message)); ?>
-    </div>
-    <div class="row">
-        <h4><?= __('Name') ?></h4>
-        <?= $this->Text->autoParagraph(h($contact->name)); ?>
     </div>
 </div>
