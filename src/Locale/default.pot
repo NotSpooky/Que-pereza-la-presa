@@ -68,19 +68,19 @@ msgstr "No se pudo eliminar el comentarios, favor intentar nuevamente."
 
 #: Controller/ContactsController.php:57;82
 msgid "The contact has been saved."
-msgstr "Se ha guardado el contacto"
+msgstr "Se ha enviado la información."
 
 #: Controller/ContactsController.php:61;86
 msgid "The contact could not be saved. Please, try again."
-msgstr "No fue posible guardar el contacto, favor intentar nuevamente."
+msgstr "No fue posible enviar los datos, favor intentar nuevamente."
 
 #: Controller/ContactsController.php:104
 msgid "The contact has been deleted."
-msgstr "Se ha eliminado el contacto."
+msgstr "Se ha eliminado los datos de contacto."
 
 #: Controller/ContactsController.php:106
 msgid "The contact could not be deleted. Please, try again."
-msgstr "No fue posible eliminar el contacto, favor intentar nuevamente."
+msgstr "No fue posible eliminar los datos de contacto, favor intentar nuevamente."
 
 #: Controller/GalleryController.php:73;103
 #: Controller/PostsController.php:88;121
@@ -927,3 +927,5 @@ msgstr "Noviembre"
 msgid "December"
 msgstr "Diciembre"
 
+msgid "Number"
+msgstr "Número"

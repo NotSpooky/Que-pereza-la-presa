@@ -66,11 +66,11 @@ class ContactsController extends AppController
         if ((!$errorUploading) && $this->request->is('post')) {
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
             if ($this->Contacts->save($contact)) {
-                $this->Flash->success(__('The contact has been saved.'));
+                $this->Flash->success('Se ha enviado la información correctamente');
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'add']);
             }
-            $this->Flash->error(__('The contact could not be saved. Please, try again.'));
+            $this->Flash->error('No fue posible enviar la información, favor intentar nuevamente');
         }
         $this->set(compact('contact'));
         $this->set('_serialize', ['contact']);
