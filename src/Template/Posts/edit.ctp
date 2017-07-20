@@ -30,7 +30,7 @@
         <?php
             echo $this->Form->control('title');
             echo '<div id="image">
-                <img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'].'" width="200" height="200" />
+                <img src="/files/Posts/photo/'.$post ['photo'].'" width="200" height="200" />
                 <button type="button" onclick="addImage()">Editar imagen</button>
             </div>';
             echo $this->Form->control('author', ['label' => 'Autor/a']);
