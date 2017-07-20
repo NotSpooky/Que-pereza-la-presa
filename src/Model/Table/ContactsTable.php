@@ -35,6 +35,9 @@ class ContactsTable extends Table
         $this->setTable('contacts');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => []
+        ]);
 
         $this->addBehavior('Timestamp');
     }
@@ -56,11 +59,11 @@ class ContactsTable extends Table
             ->notEmpty('subject');
 
         $validator
-            ->requirePresence('photo', 'create')
-            ->notEmpty('photo');
+            ->allowEmpty('photo');
 
         $validator
-            ->allowEmpty('message');
+            ->requirePresence('message', 'create')
+            ->notEmpty('message');
 
         $validator
             ->requirePresence('name', 'create')
@@ -72,8 +75,7 @@ class ContactsTable extends Table
             ->notEmpty('email');
 
         $validator
-            ->requirePresence('number', 'create')
-            ->notEmpty('number');
+            ->allowEmpty('number');
 
         return $validator;
     }

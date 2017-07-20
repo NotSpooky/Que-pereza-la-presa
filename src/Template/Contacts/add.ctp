@@ -3,25 +3,31 @@
   * @var \App\View\AppView $this
   */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Contacts'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="contacts form large-9 medium-8 columns content">
-    <?= $this->Form->create($contact) ?>
+<?php
+/**
+  * @var \App\View\AppView $this
+  */
+?>
+
+<div class="contacts form large-9 medium-8 columns content" role="content">
+    <div class="main">
+        <h2>Contacto</h2>
+        <h4>¿Tienes alguna pregunta?</h4>
+        <h3>¡Contáctanos!</h3>
+    <?= $this->Form->create($contact, ['type' => 'file']) ?>
+    
     <fieldset>
-        <legend><?= __('Add Contact') ?></legend>
         <?php
-            echo $this->Form->control('subject');
-            echo $this->Form->control('photo');
-            echo $this->Form->control('message');
-            echo $this->Form->control('name');
-            echo $this->Form->control('email');
-            echo $this->Form->control('number');
+            echo $this->Form->control('name', ['label' => 'Nombre:']);
+            echo $this->Form->control('number', ['label' => 'Teléfono:']);
+            echo $this->Form->control('email', ['label' => 'Correo electrónico:']);
+            echo $this->Form->control('subject', ['label' => 'Asunto:']);
+            echo $this->Form->control('photo', ['type' => 'file']);
+            echo $this->Form->control('message', ['label' => 'Mensaje:']);
+            
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button('Enviar mensaje') ?>
     <?= $this->Form->end() ?>
+    </div>
 </div>
