@@ -107,7 +107,6 @@ class PostsController extends AppController
         $this->set('_serialize', ['post']);
         $this->set('title', 'Creando nuevo post');
         $this->set('isAdmin', true);
-        $this->set('username', $this->Auth->user('username'));
     }
 
     /**

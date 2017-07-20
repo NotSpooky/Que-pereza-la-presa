@@ -242,10 +242,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         
 
     </style>
-    <?php if ($this->request->session()->read('Auth.User')) { 
-        // Se cambia el color de la topBar cuando se está logueado.
-        echo '<style>#topbar {background-color: #b1dde4;}</style>';
-    } ?>
 </head>
 <body>
     <button onclick="topFunction()" id="upButton" title="Go to top">Volver al inicio</button>
@@ -286,6 +282,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="/">
                 <img src="/logo.png" width="55%" height="auto"  alt="Logo" />
             </a>
+            <?php if ($this->request->session()->read('Auth.User')) {
+                echo '<p>Bienvenido/a '.$username.'.</p>';
+             } ?>
         </div>
     <?php } ?>
         <div class="row">
