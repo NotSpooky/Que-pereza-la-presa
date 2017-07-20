@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-07-19 20:09+0000\n"
+"POT-Creation-Date: 2017-07-19 20:10+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -25,7 +25,7 @@ msgstr "No se pudo guardar, favor intentar nuevamente"
 #: Controller/AppController.php:77
 #: Template/About/index.ctp:14
 msgid "About"
-msgstr "Acerda de"
+msgstr "Acerca de"
 
 #: Controller/AppController.php:78
 #: Template/Comments/index.ctp:17
