@@ -36,7 +36,9 @@
                 <td><?= h($post->author) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $post->id]) ?>
+                    <br>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $post->id]) ?>
+                    <br>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $post->id], ['confirm' => __('¿Seguro que desea eliminar {0}?', $post->title)]) ?>
                 </td>
             </tr>
