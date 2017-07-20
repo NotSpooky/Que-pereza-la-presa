@@ -293,6 +293,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
             <?php if ((!isset($isAdmin)) || !$isAdmin) { ?>
                 <aside class="large-3 columns">
+                  <?= $this->Form->create('search', ['method' => 'get', 'url' => '/']); ?>
+                  <?= $this->Form->input('search', ['type' => 'search', 'placeholder' => 'Buscar publicaciones', 'label' => false]); ?>
+                  <?= $this->Form->end() ?>
                   <a href="https://paypal.me/queperezalapresa">
                     <button>Donar mediante Paypal</button>
                     </a>
