@@ -38,6 +38,9 @@ class AboutTable extends Table
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => []
         ]);
+        $this->hasMany('Persons', [
+            'foreignKey' => 'about_id'
+        ]);
         $this->addBehavior('Timestamp');
     }
 

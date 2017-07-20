@@ -39,8 +39,8 @@ class PersonsTable extends Table
             'photo' => []
         ]);
         $this->addBehavior('Timestamp');
-        $this->belongsTo('Posts', [
-            'foreignKey' => 'post_id',
+        $this->belongsTo('About', [
+            'foreignKey' => 'about_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -74,7 +74,7 @@ class PersonsTable extends Table
     
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['post_id'], 'Posts'));
+        $rules->add($rules->existsIn(['about_id'], 'About'));
         return $rules;
     }
 }
