@@ -35,9 +35,7 @@ class ContactsTable extends Table
         $this->setTable('contacts');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
-        $this->addBehavior('Josegonzalez/Upload.Upload', [
-            'photo' => []
-        ]);
+
         $this->addBehavior('Timestamp');
     }
 
@@ -62,9 +60,35 @@ class ContactsTable extends Table
             ->notEmpty('photo');
 
         $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
+            ->allowEmpty('message');
+
+        $validator
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
+
+        $validator
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
+
+        $validator
+            ->requirePresence('number', 'create')
+            ->notEmpty('number');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['email']));
+
+        return $rules;
     }
 }
