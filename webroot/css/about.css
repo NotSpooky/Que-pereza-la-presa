@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
+.about_image {
+    max-width: 50vw;
+    /*height: 50vh;*/
+}
+
 /* Container */
 .container {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FFFFFF;
+	background-color: #CBD7E5;
 }
 
 /* About Section */
@@ -23,7 +28,7 @@
 	clear: both;
 	display: inline-block;
 	width: 100%;
-	background-color: #FFFFFF;
+	background-color: #CBD7E5;
 	padding-bottom: 35px;
 	padding-top: 0px;
 	margin-top: -5px;

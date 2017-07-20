@@ -21,6 +21,14 @@
             <td><?= h($contact->photo) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Email') ?></th>
+            <td><?= h($contact->email) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Number') ?></th>
+            <td><?= h($contact->number) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($contact->id) ?></td>
         </tr>
@@ -38,7 +46,11 @@
         <?= $this->Text->autoParagraph(h($contact->title)); ?>
     </div>
     <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($contact->text)); ?>
+        <h4><?= __('Message') ?></h4>
+        <?= $this->Text->autoParagraph(h($contact->message)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Name') ?></h4>
+        <?= $this->Text->autoParagraph(h($contact->name)); ?>
     </div>
 </div>

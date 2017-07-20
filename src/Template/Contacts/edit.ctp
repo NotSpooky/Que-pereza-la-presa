@@ -22,7 +22,10 @@
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('photo');
-            echo $this->Form->control('text');
+            echo $this->Form->control('message');
+            echo $this->Form->control('name');
+            echo $this->Form->control('email');
+            echo $this->Form->control('number');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
