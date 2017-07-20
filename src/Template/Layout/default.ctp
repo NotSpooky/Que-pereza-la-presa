@@ -277,7 +277,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
             <div class="top-bar-section">
                 <ul class="right" style="margin-right: 10%;">
-                    <h3 style="color: white;">Qu&eacute; pereza la presa</h3>
+                    <a href="/"><h3 style="color: white;">Qu&eacute; pereza la presa</h3></a>
                 </ul>
             </div>
         </nav>
@@ -349,7 +349,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="row">
                 <hr />
                 <footer>
-                    <span style="float:left; margin-left:0.5%;">2017-<?= date("Y") ?></span><span style="float:right;margin-right:0.5%;"><a href="/users/login">Adminstraci&oacute;n</a></span>
+                    <span style="float:left; margin-left:0.5%;">2017-<?= date("Y") ?></span><span style="float:right;margin-right:0.5%;"><a href="/posts">Adminstraci&oacute;n</a></span>
                 </footer>
             </div>
         <?php } ?>
