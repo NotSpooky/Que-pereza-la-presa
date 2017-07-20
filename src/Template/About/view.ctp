@@ -4,15 +4,6 @@
   * @var \App\Model\Entity\About $about
   */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <?= $adminNavbarCommonElements ?>
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Editar Acerca de nosotros'), ['action' => 'edit', $about->id]) ?> </li>
-        <li><?= $this->Html->link(__('Lista de  Personas'), ['controller' => 'Persons', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Nueva persona Person'), ['controller' => 'Persons', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
 <div class="about view large-9 medium-8 columns content">
     <div>
     <div class="main">
