@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use App\Model\Table\PersonsTable;
 /**
  * About Controller
  *
@@ -35,13 +35,30 @@ class AboutController extends AppController
      */
     public function view($id = null)
     {
+       // $persons = $this->Persons->newEntity();
         //$about = $this->About->get($id, [
         $about = $this->About->get(5, [
             'contain' => []
         ]);
-
         $this->set('about', $about);
         $this->set('_serialize', ['about']);
+        
+        
+        $persons = PersonsTable::get('Persons')->find()->all();
+        // = $this->paginate($this->Persons);
+
+        $this->set(compact('persons'));
+        $this->set('_serialize', ['persons']);
+        
+        //$persons = $this->paginate($this->About);
+        //$this->set('persons',$this->Persons->find('all'));
+        //$this->set(compact('persons'));
+    /*    
+        $query = $persons->find('all');
+        //$results = $query->all();
+        $this->set(compact('results'));*/
+        //$this->set('_serialize', ['persons']);
+        $this->set('isAdmin', true);
     }
 
     /**
@@ -92,12 +109,13 @@ class AboutController extends AppController
     }
 
     /**
-     * Delete method
-     *
-     * @param string|null $id About id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     *//*
+    * Delete method
+    *
+    * @param string|null $id About id.
+    * @return \Cake\Http\Response|null Redirects to index.
+    * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    */
+    /*
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);

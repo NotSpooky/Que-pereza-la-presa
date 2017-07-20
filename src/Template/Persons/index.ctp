@@ -35,6 +35,9 @@
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $person->id]) ?>
                     <br>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $person->id], ['confirm' => __('Are you sure you want to delete # {0}?', $person->id)]) ?>
+                    
+                    <br>
+                    <?= h($person->about_id) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

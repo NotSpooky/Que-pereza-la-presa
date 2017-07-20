@@ -53,6 +53,7 @@ class PersonsController extends AppController
         $person = $this->Persons->newEntity();
         if ($this->request->is('post')) {
             $person = $this->Persons->patchEntity($person, $this->request->getData());
+            $person->about_id=1;
             if ($this->Persons->save($person)) {
                 $this->Flash->success(__('The person has been saved.'));
 
