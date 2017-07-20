@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use App\Model\Table\PersonsTable;
+
 /**
  * About Controller
  *
@@ -35,30 +35,22 @@ class AboutController extends AppController
      */
     public function view($id = null)
     {
-       // $persons = $this->Persons->newEntity();
-        //$about = $this->About->get($id, [
-        $about = $this->About->get(5, [
-            'contain' => []
+        $about = $this->About->get(1, [
+            'contain' => ['Persons']
         ]);
+        $contador=0;
+        $this->set('contador', $contador);
         $this->set('about', $about);
+        $this->set(compact('person', 'about'));
         $this->set('_serialize', ['about']);
-        
-        
-        $persons = PersonsTable::get('Persons')->find()->all();
-        // = $this->paginate($this->Persons);
-
-        $this->set(compact('persons'));
-        $this->set('_serialize', ['persons']);
-        
-        //$persons = $this->paginate($this->About);
-        //$this->set('persons',$this->Persons->find('all'));
-        //$this->set(compact('persons'));
-    /*    
-        $query = $persons->find('all');
-        //$results = $query->all();
-        $this->set(compact('results'));*/
-        //$this->set('_serialize', ['persons']);
+        $this->set(['title' => "About us"]);
         $this->set('isAdmin', true);
+        /*$about = $this->About->get($id, [
+            'contain' => ['Persons']
+        ]);
+
+        $this->set('about', $about);
+        $this->set('_serialize', ['about']);*/
     }
 
     /**
@@ -91,8 +83,7 @@ class AboutController extends AppController
      */
     public function edit($id = null)
     {
-       // $about = $this->About->get($id, [
-       $about = $this->About->get(5, [
+        $about = $this->About->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -109,13 +100,12 @@ class AboutController extends AppController
     }
 
     /**
-    * Delete method
-    *
-    * @param string|null $id About id.
-    * @return \Cake\Http\Response|null Redirects to index.
-    * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-    */
-    /*
+     * Delete method
+     *
+     * @param string|null $id About id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -127,5 +117,5 @@ class AboutController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }*/
+    }
 }

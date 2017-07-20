@@ -12,12 +12,12 @@
     </ul>
 </nav>
 <div class="about form large-9 medium-8 columns content">
-    <?= $this->Form->create($about) ?>
+    <?= $this->Form->create($about, ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Add About') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->control('photo');
+            echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('text');
         ?>
     </fieldset>

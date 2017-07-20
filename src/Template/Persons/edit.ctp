@@ -16,12 +16,12 @@
     </ul>
 </nav>
 <div class="persons form large-9 medium-8 columns content">
-    <?= $this->Form->create($person) ?>
+    <?= $this->Form->create($person, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Edit Person') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('photo');
+            echo $this->Form->input('photo', ['type' => 'file']);
             echo $this->Form->control('description');
         ?>
     </fieldset>

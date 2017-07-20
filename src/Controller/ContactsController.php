@@ -51,7 +51,12 @@ class ContactsController extends AppController
     public function add()
     {
         $contact = $this->Contacts->newEntity();
-        if ($this->request->is('post')) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is('post')) {
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
             if ($this->Contacts->save($contact)) {
                 $this->Flash->success(__('The contact has been saved.'));
@@ -70,7 +75,7 @@ class ContactsController extends AppController
      * @param string|null $id Contact id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
+     *//*
     public function edit($id = null)
     {
         $contact = $this->Contacts->get($id, [
@@ -88,7 +93,7 @@ class ContactsController extends AppController
         $this->set(compact('contact'));
         $this->set('_serialize', ['contact']);
     }
-
+*/
     /**
      * Delete method
      *

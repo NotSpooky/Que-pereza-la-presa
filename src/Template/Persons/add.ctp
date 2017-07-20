@@ -6,7 +6,6 @@
 
 <div class="persons form large-9 medium-8 columns content">
     <?= $this->Form->create($person, ['type' => 'file']) ?>
-    <?= $this->Form->create($person) ?>
     <fieldset>
         <legend><?= __('Add Person') ?></legend>
         <?php

@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 .about_image {
-    max-width: 50vw;
+	 display: block;
+    max-width: 60vw;
+    
+
+    /*text-align: center;*/
     /*height: 50vh;*/
 }
 
@@ -132,3 +136,4 @@
 }
 
 }
+

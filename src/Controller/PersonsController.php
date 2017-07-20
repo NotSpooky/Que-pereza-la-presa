@@ -51,7 +51,12 @@ class PersonsController extends AppController
     public function add()
     {
         $person = $this->Persons->newEntity();
-        if ($this->request->is('post')) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is('post')) {
             $person = $this->Persons->patchEntity($person, $this->request->getData());
             $person->about_id=1;
             if ($this->Persons->save($person)) {
@@ -77,8 +82,14 @@ class PersonsController extends AppController
         $person = $this->Persons->get($id, [
             'contain' => []
         ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
+        $errorUploading = false;
+        if (isset ($_FILES['photo']['error']) && ($_FILES['photo']['error'] != 0)) {
+            $this->Flash->error(__('Problem uploading file, image too big?'));
+            $errorUploading = true;
+        }
+        if ((!$errorUploading) && $this->request->is(['patch', 'post', 'put'])) {
             $person = $this->Persons->patchEntity($person, $this->request->getData());
+            $person->about_id=1;
             if ($this->Persons->save($person)) {
                 $this->Flash->success(__('The person has been saved.'));
 
@@ -89,6 +100,8 @@ class PersonsController extends AppController
         $this->set(compact('person'));
         $this->set('_serialize', ['person']);
     }
+    
+    
 
     /**
      * Delete method
