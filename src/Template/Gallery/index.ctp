@@ -32,7 +32,9 @@
                 <td><?= h($gallery->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $gallery->id]) ?>
+                    <br>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $gallery->id]) ?>
+                    <br>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $gallery->id], ['confirm' => __('Are you sure you want to delete # {0}?', $gallery->id)]) ?>
                 </td>
             </tr>
