@@ -19,10 +19,10 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('summary') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('summary', ['label' => 'Resumen']) ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('author') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('author', ['label' => 'Autor/a']) ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>

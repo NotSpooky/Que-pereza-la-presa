@@ -20,9 +20,9 @@
             <fieldset>
                 <legend><?= __('Add Comment') ?></legend>
                 <?php
-                    echo $this->Form->control('username');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('text');
+                    echo $this->Form->control('username', ['label' => 'Nombre (público)']);
+                    echo $this->Form->control('email', ['label' => 'Correo electrónico (no se va a mostrar)']);
+                    echo $this->Form->control('text', ['label' => 'Comentario']);
                 ?>
                 <?= $this->Form->button('Enviar comentario') ?>
             </fieldset>

@@ -19,10 +19,10 @@
         <legend><?= __('Add Post') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->control('author', ['value' => $username]);
+            echo $this->Form->control('author', ['value' => $username, 'label' => 'Autor/a']);
             //echo $this->Form->control('photo');
             echo $this->Form->input('photo', ['type' => 'file']);
-            echo $this->Form->control('summary');
+            echo $this->Form->control('summary', ['label' => 'Resumen']);
             echo $this->Form->control('text');
         ?>
     </fieldset>

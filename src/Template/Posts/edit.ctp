@@ -33,9 +33,9 @@
                 <img src="'.DS.'files'.DS.'Posts'.DS.'photo'.DS.$post ['photo'].'" width="200" height="200" />
                 <button type="button" onclick="addImage()">Editar imagen</button>
             </div>';
-            echo $this->Form->control('summary');
+            echo $this->Form->control('author', ['label' => 'Autor/a']);
+            echo $this->Form->control('summary', ['label' => 'Resumen']);
             echo $this->Form->control('text');
-            echo $this->Form->control('author');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

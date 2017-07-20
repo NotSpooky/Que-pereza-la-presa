@@ -83,8 +83,6 @@ class CommentsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['username']));
-        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['post_id'], 'Posts'));
 
         return $rules;
